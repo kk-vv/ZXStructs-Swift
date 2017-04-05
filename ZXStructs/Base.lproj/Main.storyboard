@@ -62,13 +62,22 @@
                                     <constraint firstItem="s7R-aP-UNW" firstAttribute="top" secondItem="qgg-ID-S7a" secondAttribute="bottom" constant="10" id="w2b-Qa-cP7"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Rn-Co-yya">
+                                <rect key="frame" x="171" y="427.5" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="46w-eV-qAX" kind="show" id="end-KP-tHB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="QOD-hZ-wtQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="ILx-Ta-T2L"/>
                             <constraint firstItem="QOD-hZ-wtQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="84" id="Man-KZ-lTB"/>
+                            <constraint firstItem="8Rn-Co-yya" firstAttribute="centerX" secondItem="QOD-hZ-wtQ" secondAttribute="centerX" id="XKA-mV-Sap"/>
                             <constraint firstItem="QOD-hZ-wtQ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:2" id="Y4k-tk-sUC"/>
                             <constraint firstAttribute="trailing" secondItem="QOD-hZ-wtQ" secondAttribute="trailing" constant="10" id="YcD-Te-tLd"/>
+                            <constraint firstItem="8Rn-Co-yya" firstAttribute="top" secondItem="QOD-hZ-wtQ" secondAttribute="bottom" constant="10" id="qhF-70-RZK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eqm-HV-5EX"/>
@@ -84,12 +93,45 @@
             </objects>
             <point key="canvasLocation" x="1055.2" y="123.68815592203899"/>
         </scene>
+        <!--Detial-->
+        <scene sceneID="btL-lw-CtQ">
+            <objects>
+                <viewController title="Detial" id="46w-eV-qAX" customClass="ZXDetailViewController" customModule="ZXStructs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="icB-0B-bbi"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wip-bH-Jqz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iCl-2E-P6p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JoJ-ZH-y7t">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JoJ-ZH-y7t" firstAttribute="leading" secondItem="iCl-2E-P6p" secondAttribute="leading" id="1RP-ta-ulQ"/>
+                            <constraint firstItem="JoJ-ZH-y7t" firstAttribute="top" secondItem="icB-0B-bbi" secondAttribute="bottom" id="Wef-kw-LA6"/>
+                            <constraint firstItem="Wip-bH-Jqz" firstAttribute="top" secondItem="JoJ-ZH-y7t" secondAttribute="bottom" id="dLd-gj-qJD"/>
+                            <constraint firstAttribute="trailing" secondItem="JoJ-ZH-y7t" secondAttribute="trailing" id="fvf-Px-1G4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h9G-eP-0Be" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1736.8" y="125.4872563718141"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="1qK-xW-PRF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fcJ-ez-32K" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V6N-Hg-jx2">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="V6N-Hg-jx2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -100,7 +142,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sNn-Iy-xyP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="116" y="123.68815592203899"/>
+            <point key="canvasLocation" x="121" y="124"/>
         </scene>
     </scenes>
 </document>

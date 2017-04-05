@@ -5,9 +5,9 @@
 	<key>zx_userSystemBackButton</key>
 	<false/>
 	<key>zx_showSeparatorLine</key>
-	<false/>
+	<true/>
 	<key>zx_isTranslucent</key>
-	<false/>
+	<true/>
 	<key>zx_navBarColor</key>
 	<string>#3B87EE</string>
 	<key>zx_titleColor</key>

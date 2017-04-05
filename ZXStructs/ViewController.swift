@@ -40,6 +40,7 @@ class ViewController: UIViewController {
         //self.lbIconFont.font    = UIFont.zx_iconFont //默认正文字体大小
         self.lbIconFont.text    =   "Hi,\u{e616}"
         self.lbIconFont.textColor   =   UIColor.zx_customCColor
+        self.zx_clearNavbarBackButtonTitle()
     }
 
     override func didReceiveMemoryWarning() {

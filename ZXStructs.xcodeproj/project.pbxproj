@@ -17,6 +17,8 @@
 		6A557DB51E8E3AEB00904791 /* UIColor+ZX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A557DB41E8E3AEB00904791 /* UIColor+ZX.swift */; };
 		6A557DB71E8E3AFD00904791 /* Bundle+ZX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A557DB61E8E3AFD00904791 /* Bundle+ZX.swift */; };
 		6A557DB91E8E3B0400904791 /* String+ZX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A557DB81E8E3B0400904791 /* String+ZX.swift */; };
+		6A7D28B91E948DC4005BBFD9 /* UIViewController+ZXNavControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D28B81E948DC4005BBFD9 /* UIViewController+ZXNavControl.swift */; };
+		6A7D28BB1E9492EA005BBFD9 /* ZXDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D28BA1E9492EA005BBFD9 /* ZXDetailViewController.swift */; };
 		6AFA69D01E8F52B60009E41B /* ZXFontConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFA69CF1E8F52B60009E41B /* ZXFontConfig.swift */; };
 		6AFA69D21E8F54BD0009E41B /* UIDevice+ZX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFA69D11E8F54BD0009E41B /* UIDevice+ZX.swift */; };
 		6AFA69D41E8F75000009E41B /* ZXConfigValueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFA69D31E8F74FF0009E41B /* ZXConfigValueProtocol.swift */; };
@@ -40,6 +42,8 @@
 		6A557DB41E8E3AEB00904791 /* UIColor+ZX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ZX.swift"; sourceTree = "<group>"; };
 		6A557DB61E8E3AFD00904791 /* Bundle+ZX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+ZX.swift"; sourceTree = "<group>"; };
 		6A557DB81E8E3B0400904791 /* String+ZX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ZX.swift"; sourceTree = "<group>"; };
+		6A7D28B81E948DC4005BBFD9 /* UIViewController+ZXNavControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ZXNavControl.swift"; sourceTree = "<group>"; };
+		6A7D28BA1E9492EA005BBFD9 /* ZXDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXDetailViewController.swift; sourceTree = "<group>"; };
 		6AFA69CF1E8F52B60009E41B /* ZXFontConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXFontConfig.swift; sourceTree = "<group>"; };
 		6AFA69D11E8F54BD0009E41B /* UIDevice+ZX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+ZX.swift"; sourceTree = "<group>"; };
 		6AFA69D31E8F74FF0009E41B /* ZXConfigValueProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXConfigValueProtocol.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 			children = (
 				6A557D921E8DF59A00904791 /* AppDelegate.swift */,
 				6A557D941E8DF59A00904791 /* ViewController.swift */,
+				6A7D28BA1E9492EA005BBFD9 /* ZXDetailViewController.swift */,
 				6A557DA41E8DF61F00904791 /* ZXStructs */,
 				6A557D961E8DF59A00904791 /* Main.storyboard */,
 				6A557D991E8DF59A00904791 /* Assets.xcassets */,
@@ -115,6 +120,7 @@
 				6A557DB61E8E3AFD00904791 /* Bundle+ZX.swift */,
 				6A557DB81E8E3B0400904791 /* String+ZX.swift */,
 				6AFA69DD1E8F9D450009E41B /* ZXStructs.swift */,
+				6A7D28B81E948DC4005BBFD9 /* UIViewController+ZXNavControl.swift */,
 			);
 			path = ZXSetting;
 			sourceTree = "<group>";
@@ -198,6 +204,7 @@
 				6A557DAD1E8E025700904791 /* ZXTintColorConfig.swift in Sources */,
 				6A557D951E8DF59A00904791 /* ViewController.swift in Sources */,
 				6A557DB51E8E3AEB00904791 /* UIColor+ZX.swift in Sources */,
+				6A7D28B91E948DC4005BBFD9 /* UIViewController+ZXNavControl.swift in Sources */,
 				6AFA69E01E8FA63B0009E41B /* ZXUIConfig.swift in Sources */,
 				6AFA69DE1E8F9D450009E41B /* ZXStructs.swift in Sources */,
 				6AFA69D01E8F52B60009E41B /* ZXFontConfig.swift in Sources */,
@@ -207,6 +214,7 @@
 				6AFA69D61E8F7AA10009E41B /* UIFont+ZX.swift in Sources */,
 				6AFA69DC1E8F99BB0009E41B /* ZXNavBarConfig.swift in Sources */,
 				6AFA69D21E8F54BD0009E41B /* UIDevice+ZX.swift in Sources */,
+				6A7D28BB1E9492EA005BBFD9 /* ZXDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

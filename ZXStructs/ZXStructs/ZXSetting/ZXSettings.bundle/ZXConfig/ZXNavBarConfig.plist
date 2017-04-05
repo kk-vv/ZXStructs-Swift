@@ -8,14 +8,14 @@
 	<false/>
 	<key>zx_isTranslucent</key>
 	<false/>
+	<key>zx_navTitleFont</key>
+	<string>PingFangSC-Regular</string>
 	<key>zx_navBarColor</key>
 	<string>#3B87EE</string>
 	<key>zx_titleColor</key>
 	<string>#ffffff</string>
-	<key>zx_navTitleFont</key>
-	<string>PingFangSC-Regular</string>
 	<key>zx_barButtonColor</key>
-	<string>#c8c800</string>
+	<string>#ff4200</string>
 	<key>zx_titleFontSize</key>
 	<dict>
 		<key>4_0</key>
