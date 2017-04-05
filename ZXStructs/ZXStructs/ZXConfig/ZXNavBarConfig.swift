@@ -49,8 +49,12 @@ class ZXNavBarConfig: NSObject {
         return configFontSizeValue(forKey: "zx_barButtonFontSize", defaultSize: 16)
     }
     //MARK: - Nav Title Font
-    class var navTilteFont: UIFont! {
-        return UIFont(name: configStringValue(forKey: "zx_navTitleFont", defaultValue: "Arial"), size: titleFontSize)
+    class var navTitleFontName: String! {
+        return configStringValue(forKey: "zx_navTitleFont", defaultValue: "Arial")
+    }
+    
+    class func navTilteFont(_ size:CGFloat) -> UIFont! {
+        return UIFont(name: navTitleFontName, size: size)
     }
 }
 

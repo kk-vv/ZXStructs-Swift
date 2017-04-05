@@ -32,7 +32,11 @@ extension Bundle{
     }
     
     class func zx_navBackImage() -> UIImage! {
+        return UIImage(contentsOfFile: zx_navBackImageName())
+    }
+    
+    class func zx_navBackImageName() -> String! {
         let scale: Int = Int(UIScreen.main.scale)
-        return UIImage(contentsOfFile: zxSettingBundle.path(forResource: "zx_navback@\(scale)x", ofType: "png")!)
+        return zxSettingBundle.path(forResource: "zx_navback@\(scale)x", ofType: "png")!
     }
 }

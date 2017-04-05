@@ -15,7 +15,7 @@ class ZXUIConfig: NSObject {
         navBarAppearance.barTintColor   = UIColor.zx_navBarColor
         navBarAppearance.tintColor      = UIColor.zx_navBarButtonColor
         
-        navBarAppearance.titleTextAttributes = {[NSForegroundColorAttributeName: UIColor.zx_navBarTitleColor,NSFontAttributeName: ZXNavBarConfig.navTilteFont]}()
+        navBarAppearance.titleTextAttributes = {[NSForegroundColorAttributeName: UIColor.zx_navBarTitleColor,NSFontAttributeName: ZXNavBarConfig.navTilteFont(ZXNavBarConfig.titleFontSize)]}()
 
         if !ZXNavBarConfig.showSeparatorLine {
             navBarAppearance.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)

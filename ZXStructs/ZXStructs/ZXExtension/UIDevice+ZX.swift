@@ -14,13 +14,13 @@ enum ZX_DeviceSizeType {
     func description() -> String {
         switch self {
         case .s_4_0Inch:
-            return "iPhone4/4s/5/5s/se"
+            return "<=4.0Inch"
         case .s_4_7Inch:
-            return "iPhone6/6s/7"
+            return "4.7Inch"
         case .s_5_5_Inch:
-            return "iPhone6P/6sP/7sP"
+            return "5.5Inch"
         case .s_iPad:
-            return "iPad/New Device"
+            return ">= 5.5Inch"
         }
     }
 }

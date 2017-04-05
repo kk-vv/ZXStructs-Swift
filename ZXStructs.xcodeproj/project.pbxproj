@@ -12,21 +12,23 @@
 		6A557D981E8DF59A00904791 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A557D961E8DF59A00904791 /* Main.storyboard */; };
 		6A557D9A1E8DF59A00904791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A557D991E8DF59A00904791 /* Assets.xcassets */; };
 		6A557D9D1E8DF59A00904791 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A557D9B1E8DF59A00904791 /* LaunchScreen.storyboard */; };
-		6A557DA71E8DF62C00904791 /* ZXSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6A557DA61E8DF62C00904791 /* ZXSettings.bundle */; };
-		6A557DAD1E8E025700904791 /* ZXTintColorConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A557DAC1E8E025700904791 /* ZXTintColorConfig.swift */; };
-		6A557DB51E8E3AEB00904791 /* UIColor+ZX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A557DB41E8E3AEB00904791 /* UIColor+ZX.swift */; };
-		6A557DB71E8E3AFD00904791 /* Bundle+ZX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A557DB61E8E3AFD00904791 /* Bundle+ZX.swift */; };
-		6A557DB91E8E3B0400904791 /* String+ZX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A557DB81E8E3B0400904791 /* String+ZX.swift */; };
-		6A7D28B91E948DC4005BBFD9 /* UIViewController+ZXNavControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D28B81E948DC4005BBFD9 /* UIViewController+ZXNavControl.swift */; };
 		6A7D28BB1E9492EA005BBFD9 /* ZXDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D28BA1E9492EA005BBFD9 /* ZXDetailViewController.swift */; };
-		6AFA69D01E8F52B60009E41B /* ZXFontConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFA69CF1E8F52B60009E41B /* ZXFontConfig.swift */; };
-		6AFA69D21E8F54BD0009E41B /* UIDevice+ZX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFA69D11E8F54BD0009E41B /* UIDevice+ZX.swift */; };
-		6AFA69D41E8F75000009E41B /* ZXConfigValueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFA69D31E8F74FF0009E41B /* ZXConfigValueProtocol.swift */; };
-		6AFA69D61E8F7AA10009E41B /* UIFont+ZX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFA69D51E8F7AA10009E41B /* UIFont+ZX.swift */; };
+		6A7D28D11E949994005BBFD9 /* Bundle+ZX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D28BD1E949994005BBFD9 /* Bundle+ZX.swift */; };
+		6A7D28D21E949994005BBFD9 /* String+ZX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D28BE1E949994005BBFD9 /* String+ZX.swift */; };
+		6A7D28D31E949994005BBFD9 /* UIColor+ZX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D28BF1E949994005BBFD9 /* UIColor+ZX.swift */; };
+		6A7D28D41E949994005BBFD9 /* UIDevice+ZX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D28C01E949994005BBFD9 /* UIDevice+ZX.swift */; };
+		6A7D28D51E949994005BBFD9 /* UIFont+ZX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D28C11E949994005BBFD9 /* UIFont+ZX.swift */; };
+		6A7D28D61E949994005BBFD9 /* UIViewController+ZXNavControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D28C21E949994005BBFD9 /* UIViewController+ZXNavControl.swift */; };
+		6A7D28DD1E949994005BBFD9 /* ZXStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D28CE1E949994005BBFD9 /* ZXStructs.swift */; };
+		6A7D28E91E94C692005BBFD9 /* ZXConfigValueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D28E31E94C692005BBFD9 /* ZXConfigValueProtocol.swift */; };
+		6A7D28EA1E94C692005BBFD9 /* ZXFontConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D28E41E94C692005BBFD9 /* ZXFontConfig.swift */; };
+		6A7D28EB1E94C692005BBFD9 /* ZXNavBarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D28E51E94C692005BBFD9 /* ZXNavBarConfig.swift */; };
+		6A7D28EC1E94C692005BBFD9 /* ZXSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6A7D28E61E94C692005BBFD9 /* ZXSettings.bundle */; };
+		6A7D28ED1E94C692005BBFD9 /* ZXTintColorConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D28E71E94C692005BBFD9 /* ZXTintColorConfig.swift */; };
+		6A7D28EE1E94C692005BBFD9 /* ZXUIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D28E81E94C692005BBFD9 /* ZXUIConfig.swift */; };
+		6A7D28F11E94CA26005BBFD9 /* r1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A7D28EF1E94CA26005BBFD9 /* r1.png */; };
+		6A7D28F21E94CA26005BBFD9 /* r2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A7D28F01E94CA26005BBFD9 /* r2.png */; };
 		6AFA69D81E8F8E410009E41B /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFA69D71E8F8E410009E41B /* iconfont.ttf */; };
-		6AFA69DC1E8F99BB0009E41B /* ZXNavBarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFA69DB1E8F99BB0009E41B /* ZXNavBarConfig.swift */; };
-		6AFA69DE1E8F9D450009E41B /* ZXStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFA69DD1E8F9D450009E41B /* ZXStructs.swift */; };
-		6AFA69E01E8FA63B0009E41B /* ZXUIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFA69DF1E8FA63A0009E41B /* ZXUIConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,21 +39,23 @@
 		6A557D991E8DF59A00904791 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A557D9C1E8DF59A00904791 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A557D9E1E8DF59A00904791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6A557DA61E8DF62C00904791 /* ZXSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZXSettings.bundle; sourceTree = "<group>"; };
-		6A557DAC1E8E025700904791 /* ZXTintColorConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ZXTintColorConfig.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		6A557DB41E8E3AEB00904791 /* UIColor+ZX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ZX.swift"; sourceTree = "<group>"; };
-		6A557DB61E8E3AFD00904791 /* Bundle+ZX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+ZX.swift"; sourceTree = "<group>"; };
-		6A557DB81E8E3B0400904791 /* String+ZX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ZX.swift"; sourceTree = "<group>"; };
-		6A7D28B81E948DC4005BBFD9 /* UIViewController+ZXNavControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ZXNavControl.swift"; sourceTree = "<group>"; };
 		6A7D28BA1E9492EA005BBFD9 /* ZXDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXDetailViewController.swift; sourceTree = "<group>"; };
-		6AFA69CF1E8F52B60009E41B /* ZXFontConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXFontConfig.swift; sourceTree = "<group>"; };
-		6AFA69D11E8F54BD0009E41B /* UIDevice+ZX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+ZX.swift"; sourceTree = "<group>"; };
-		6AFA69D31E8F74FF0009E41B /* ZXConfigValueProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXConfigValueProtocol.swift; sourceTree = "<group>"; };
-		6AFA69D51E8F7AA10009E41B /* UIFont+ZX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+ZX.swift"; sourceTree = "<group>"; };
+		6A7D28BD1E949994005BBFD9 /* Bundle+ZX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+ZX.swift"; sourceTree = "<group>"; };
+		6A7D28BE1E949994005BBFD9 /* String+ZX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ZX.swift"; sourceTree = "<group>"; };
+		6A7D28BF1E949994005BBFD9 /* UIColor+ZX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ZX.swift"; sourceTree = "<group>"; };
+		6A7D28C01E949994005BBFD9 /* UIDevice+ZX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+ZX.swift"; sourceTree = "<group>"; };
+		6A7D28C11E949994005BBFD9 /* UIFont+ZX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+ZX.swift"; sourceTree = "<group>"; };
+		6A7D28C21E949994005BBFD9 /* UIViewController+ZXNavControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ZXNavControl.swift"; sourceTree = "<group>"; };
+		6A7D28CE1E949994005BBFD9 /* ZXStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXStructs.swift; sourceTree = "<group>"; };
+		6A7D28E31E94C692005BBFD9 /* ZXConfigValueProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXConfigValueProtocol.swift; sourceTree = "<group>"; };
+		6A7D28E41E94C692005BBFD9 /* ZXFontConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXFontConfig.swift; sourceTree = "<group>"; };
+		6A7D28E51E94C692005BBFD9 /* ZXNavBarConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXNavBarConfig.swift; sourceTree = "<group>"; };
+		6A7D28E61E94C692005BBFD9 /* ZXSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZXSettings.bundle; sourceTree = "<group>"; };
+		6A7D28E71E94C692005BBFD9 /* ZXTintColorConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXTintColorConfig.swift; sourceTree = "<group>"; };
+		6A7D28E81E94C692005BBFD9 /* ZXUIConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXUIConfig.swift; sourceTree = "<group>"; };
+		6A7D28EF1E94CA26005BBFD9 /* r1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = r1.png; sourceTree = "<group>"; };
+		6A7D28F01E94CA26005BBFD9 /* r2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = r2.png; sourceTree = "<group>"; };
 		6AFA69D71E8F8E410009E41B /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
-		6AFA69DB1E8F99BB0009E41B /* ZXNavBarConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXNavBarConfig.swift; sourceTree = "<group>"; };
-		6AFA69DD1E8F9D450009E41B /* ZXStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXStructs.swift; sourceTree = "<group>"; };
-		6AFA69DF1E8FA63A0009E41B /* ZXUIConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXUIConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 				6A557D921E8DF59A00904791 /* AppDelegate.swift */,
 				6A557D941E8DF59A00904791 /* ViewController.swift */,
 				6A7D28BA1E9492EA005BBFD9 /* ZXDetailViewController.swift */,
+				6A7D28EF1E94CA26005BBFD9 /* r1.png */,
+				6A7D28F01E94CA26005BBFD9 /* r2.png */,
 				6A557DA41E8DF61F00904791 /* ZXStructs */,
 				6A557D961E8DF59A00904791 /* Main.storyboard */,
 				6A557D991E8DF59A00904791 /* Assets.xcassets */,
@@ -100,29 +106,109 @@
 			isa = PBXGroup;
 			children = (
 				6AFA69D71E8F8E410009E41B /* iconfont.ttf */,
-				6A557DA51E8DF61F00904791 /* ZXSetting */,
+				6A7D28CE1E949994005BBFD9 /* ZXStructs.swift */,
+				6A7D28E21E94C692005BBFD9 /* ZXConfig */,
+				6A7D28BC1E949994005BBFD9 /* ZXExtension */,
+				6A7D28DE1E949ABA005BBFD9 /* ZXCommonUI */,
+				6A7D28C41E949994005BBFD9 /* ZXNetwork */,
+				6A7D28C51E949994005BBFD9 /* ZXRemoteNotice */,
+				6A7D28C61E949994005BBFD9 /* ZXRouter */,
+				6A7D28CF1E949994005BBFD9 /* ZXUtilityTools */,
+				6A7D28D01E949994005BBFD9 /* ZXWebH5 */,
 			);
 			path = ZXStructs;
 			sourceTree = "<group>";
 		};
-		6A557DA51E8DF61F00904791 /* ZXSetting */ = {
+		6A7D28BC1E949994005BBFD9 /* ZXExtension */ = {
 			isa = PBXGroup;
 			children = (
-				6A557DA61E8DF62C00904791 /* ZXSettings.bundle */,
-				6A557DAC1E8E025700904791 /* ZXTintColorConfig.swift */,
-				6AFA69CF1E8F52B60009E41B /* ZXFontConfig.swift */,
-				6AFA69DB1E8F99BB0009E41B /* ZXNavBarConfig.swift */,
-				6AFA69D31E8F74FF0009E41B /* ZXConfigValueProtocol.swift */,
-				6AFA69DF1E8FA63A0009E41B /* ZXUIConfig.swift */,
-				6AFA69D11E8F54BD0009E41B /* UIDevice+ZX.swift */,
-				6A557DB41E8E3AEB00904791 /* UIColor+ZX.swift */,
-				6AFA69D51E8F7AA10009E41B /* UIFont+ZX.swift */,
-				6A557DB61E8E3AFD00904791 /* Bundle+ZX.swift */,
-				6A557DB81E8E3B0400904791 /* String+ZX.swift */,
-				6AFA69DD1E8F9D450009E41B /* ZXStructs.swift */,
-				6A7D28B81E948DC4005BBFD9 /* UIViewController+ZXNavControl.swift */,
+				6A7D28BD1E949994005BBFD9 /* Bundle+ZX.swift */,
+				6A7D28BE1E949994005BBFD9 /* String+ZX.swift */,
+				6A7D28BF1E949994005BBFD9 /* UIColor+ZX.swift */,
+				6A7D28C01E949994005BBFD9 /* UIDevice+ZX.swift */,
+				6A7D28C11E949994005BBFD9 /* UIFont+ZX.swift */,
+				6A7D28C21E949994005BBFD9 /* UIViewController+ZXNavControl.swift */,
 			);
-			path = ZXSetting;
+			path = ZXExtension;
+			sourceTree = "<group>";
+		};
+		6A7D28C41E949994005BBFD9 /* ZXNetwork */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZXNetwork;
+			sourceTree = "<group>";
+		};
+		6A7D28C51E949994005BBFD9 /* ZXRemoteNotice */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZXRemoteNotice;
+			sourceTree = "<group>";
+		};
+		6A7D28C61E949994005BBFD9 /* ZXRouter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZXRouter;
+			sourceTree = "<group>";
+		};
+		6A7D28CF1E949994005BBFD9 /* ZXUtilityTools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZXUtilityTools;
+			sourceTree = "<group>";
+		};
+		6A7D28D01E949994005BBFD9 /* ZXWebH5 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZXWebH5;
+			sourceTree = "<group>";
+		};
+		6A7D28DE1E949ABA005BBFD9 /* ZXCommonUI */ = {
+			isa = PBXGroup;
+			children = (
+				6A7D28DF1E949ABA005BBFD9 /* ZXCheckList */,
+				6A7D28E01E949ABA005BBFD9 /* ZXEmptyView */,
+				6A7D28E11E949ABA005BBFD9 /* ZXHUD */,
+			);
+			path = ZXCommonUI;
+			sourceTree = "<group>";
+		};
+		6A7D28DF1E949ABA005BBFD9 /* ZXCheckList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZXCheckList;
+			sourceTree = "<group>";
+		};
+		6A7D28E01E949ABA005BBFD9 /* ZXEmptyView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZXEmptyView;
+			sourceTree = "<group>";
+		};
+		6A7D28E11E949ABA005BBFD9 /* ZXHUD */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZXHUD;
+			sourceTree = "<group>";
+		};
+		6A7D28E21E94C692005BBFD9 /* ZXConfig */ = {
+			isa = PBXGroup;
+			children = (
+				6A7D28E31E94C692005BBFD9 /* ZXConfigValueProtocol.swift */,
+				6A7D28E41E94C692005BBFD9 /* ZXFontConfig.swift */,
+				6A7D28E51E94C692005BBFD9 /* ZXNavBarConfig.swift */,
+				6A7D28E61E94C692005BBFD9 /* ZXSettings.bundle */,
+				6A7D28E71E94C692005BBFD9 /* ZXTintColorConfig.swift */,
+				6A7D28E81E94C692005BBFD9 /* ZXUIConfig.swift */,
+			);
+			path = ZXConfig;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,8 +271,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A557DA71E8DF62C00904791 /* ZXSettings.bundle in Resources */,
+				6A7D28F21E94CA26005BBFD9 /* r2.png in Resources */,
+				6A7D28F11E94CA26005BBFD9 /* r1.png in Resources */,
 				6A557D9D1E8DF59A00904791 /* LaunchScreen.storyboard in Resources */,
+				6A7D28EC1E94C692005BBFD9 /* ZXSettings.bundle in Resources */,
 				6A557D9A1E8DF59A00904791 /* Assets.xcassets in Resources */,
 				6AFA69D81E8F8E410009E41B /* iconfont.ttf in Resources */,
 				6A557D981E8DF59A00904791 /* Main.storyboard in Resources */,
@@ -200,21 +288,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AFA69D41E8F75000009E41B /* ZXConfigValueProtocol.swift in Sources */,
-				6A557DAD1E8E025700904791 /* ZXTintColorConfig.swift in Sources */,
+				6A7D28D51E949994005BBFD9 /* UIFont+ZX.swift in Sources */,
+				6A7D28E91E94C692005BBFD9 /* ZXConfigValueProtocol.swift in Sources */,
+				6A7D28D31E949994005BBFD9 /* UIColor+ZX.swift in Sources */,
+				6A7D28D61E949994005BBFD9 /* UIViewController+ZXNavControl.swift in Sources */,
+				6A7D28ED1E94C692005BBFD9 /* ZXTintColorConfig.swift in Sources */,
+				6A7D28D11E949994005BBFD9 /* Bundle+ZX.swift in Sources */,
+				6A7D28EB1E94C692005BBFD9 /* ZXNavBarConfig.swift in Sources */,
+				6A7D28DD1E949994005BBFD9 /* ZXStructs.swift in Sources */,
 				6A557D951E8DF59A00904791 /* ViewController.swift in Sources */,
-				6A557DB51E8E3AEB00904791 /* UIColor+ZX.swift in Sources */,
-				6A7D28B91E948DC4005BBFD9 /* UIViewController+ZXNavControl.swift in Sources */,
-				6AFA69E01E8FA63B0009E41B /* ZXUIConfig.swift in Sources */,
-				6AFA69DE1E8F9D450009E41B /* ZXStructs.swift in Sources */,
-				6AFA69D01E8F52B60009E41B /* ZXFontConfig.swift in Sources */,
 				6A557D931E8DF59A00904791 /* AppDelegate.swift in Sources */,
-				6A557DB91E8E3B0400904791 /* String+ZX.swift in Sources */,
-				6A557DB71E8E3AFD00904791 /* Bundle+ZX.swift in Sources */,
-				6AFA69D61E8F7AA10009E41B /* UIFont+ZX.swift in Sources */,
-				6AFA69DC1E8F99BB0009E41B /* ZXNavBarConfig.swift in Sources */,
-				6AFA69D21E8F54BD0009E41B /* UIDevice+ZX.swift in Sources */,
+				6A7D28EA1E94C692005BBFD9 /* ZXFontConfig.swift in Sources */,
+				6A7D28D21E949994005BBFD9 /* String+ZX.swift in Sources */,
 				6A7D28BB1E9492EA005BBFD9 /* ZXDetailViewController.swift in Sources */,
+				6A7D28D41E949994005BBFD9 /* UIDevice+ZX.swift in Sources */,
+				6A7D28EE1E94C692005BBFD9 /* ZXUIConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
