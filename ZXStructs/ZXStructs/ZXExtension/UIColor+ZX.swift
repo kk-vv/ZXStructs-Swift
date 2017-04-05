@@ -53,6 +53,7 @@ extension UIColor {
     class var zx_textColorMark: UIColor! {
         return zx_colorWithHexString(ZXFontConfig.textColorMark)
     }
+    
     //MARK: - NaviationBar-Color
     class var zx_navBarColor: UIColor! {
         return zx_colorWithHexString(ZXNavBarConfig.narBarColorStr)

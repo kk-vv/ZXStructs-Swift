@@ -7,7 +7,7 @@
 //
 
 import UIKit
-let zx_navFixSapce:CGFloat = -10
+let zx_navFixSapce:CGFloat = -8
 
 enum ZXNavBarButtonItemPosition {
     case left,right
@@ -23,6 +23,13 @@ extension UIViewController {
         self.navigationItem.backBarButtonItem = backItem
     }
     
+    
+    /// Add BarButton Item from Image names
+    ///
+    /// - Parameters:
+    ///   - names: image names
+    ///   - useOriginalColor: (true - imageColor false - bar tintcolor)
+    ///   - position: .left .right
     func zx_navbarAddBarButtonItems(imageNames names:Array<String>,useOriginalColor:Bool, position:ZXNavBarButtonItemPosition) {
         if names.count > 0 {
             var items: Array<UIBarButtonItem> = Array()
@@ -58,9 +65,17 @@ extension UIViewController {
                 self.navigationItem.rightBarButtonItem = nil;
             }
         }
+        //self.navigationController?.navigationBar.topItem?.xxx_ButtonItem 效果不对
     }
     
     
+    /// Add BarButton Item from text title
+    ///
+    /// - Parameters:
+    ///   - names: text title
+    ///   - font: text font (Default:ZXNavBarConfig.navTilteFont)
+    ///   - color: text color (Default:UIColor.zx_navBarButtonColor)
+    ///   - position: .left .right
     func zx_navbarAddBarButtonItems(textNames names:Array<String>,font:UIFont?,color:UIColor?, position:ZXNavBarButtonItemPosition) {
         if names.count > 0 {
             var items: Array<UIBarButtonItem> = Array()
@@ -95,6 +110,14 @@ extension UIViewController {
         }
     }
     
+    
+    /// Add BarButton Item from iconfont Unicode Text
+    ///
+    /// - Parameters:
+    ///   - names: iconfont Unicode Text
+    ///   - size: font size
+    ///   - color: font color (Default UIColor.zx_navBarButtonColor)
+    ///   - position: .left .right
     func zx_navbarAddBarButtonItems(iconFontTexts names:Array<String>,fontSize size:CGFloat,color:UIColor?, position:ZXNavBarButtonItemPosition) {
         if names.count > 0 {
             var items: Array<UIBarButtonItem> = Array()
@@ -129,21 +152,38 @@ extension UIViewController {
         }
     }
     
-    
-    func xxx_rightBarButtonAction(sender:UIBarButtonItem) {
-        zx_rightBarButtonAction(index: sender.tag)
-    }
-    
+    /// Right Bar Button Action
+    ///
+    /// - Parameter index: index 0...
     func zx_rightBarButtonAction(index: Int) {
         
     }
     
-    func xxx_leftBarButtonAction(sender:UIBarButtonItem) {
-        zx_leftBarButtonAction(index: sender.tag)
-    }
-    
+    /// Left BarButton Action
+    ///
+    /// - Parameter index: index 0...
     func zx_leftBarButtonAction(index: Int) {
         
+    }
+    
+    //MARK: - NavBar Background Color
+    func zx_setnavbarBackgroundColor(_ color: UIColor!) {
+        self.navigationController?.navigationBar.barTintColor = color
+        if color == UIColor.clear {
+            self.navigationController?.navigationBar.isTranslucent = true
+            self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .compact)
+        }else{
+            self.navigationController?.navigationBar.isTranslucent = false
+        }
+    }
+    
+    //MARK: -
+    final func xxx_rightBarButtonAction(sender:UIBarButtonItem) {
+        zx_rightBarButtonAction(index: sender.tag)
+    }
+    
+    final func xxx_leftBarButtonAction(sender:UIBarButtonItem) {
+        zx_leftBarButtonAction(index: sender.tag)
     }
     
     func zx_popviewController(animated: Bool) {

@@ -128,16 +128,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YjL-GN-nJe">
+                                <rect key="frame" x="76" y="355" width="90" height="30"/>
+                                <state key="normal" title="ChangeColor"/>
+                                <connections>
+                                    <action selector="changeColor:" destination="46w-eV-qAX" eventType="touchUpInside" id="A1k-Al-aMD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNa-pA-ajN">
+                                <rect key="frame" x="185" y="355" width="73" height="30"/>
+                                <state key="normal" title="ClearColor"/>
+                                <connections>
+                                    <action selector="clearColor:" destination="46w-eV-qAX" eventType="touchUpInside" id="VEv-AE-D8L"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="JoJ-ZH-y7t" firstAttribute="leading" secondItem="iCl-2E-P6p" secondAttribute="leading" id="1RP-ta-ulQ"/>
+                            <constraint firstItem="DNa-pA-ajN" firstAttribute="centerY" secondItem="YjL-GN-nJe" secondAttribute="centerY" id="53c-d9-M1D"/>
+                            <constraint firstItem="DNa-pA-ajN" firstAttribute="leading" secondItem="YjL-GN-nJe" secondAttribute="trailing" constant="19" id="7NW-qv-lwD"/>
                             <constraint firstItem="mKf-i5-URa" firstAttribute="leading" secondItem="itG-uV-fTv" secondAttribute="trailing" constant="8" id="OmY-h8-vmP"/>
                             <constraint firstItem="itG-uV-fTv" firstAttribute="top" secondItem="JoJ-ZH-y7t" secondAttribute="bottom" constant="31" id="UBu-ph-n1Y"/>
                             <constraint firstItem="JoJ-ZH-y7t" firstAttribute="top" secondItem="icB-0B-bbi" secondAttribute="bottom" id="Wef-kw-LA6"/>
                             <constraint firstItem="mKf-i5-URa" firstAttribute="centerY" secondItem="itG-uV-fTv" secondAttribute="centerY" id="c3t-gT-PI8"/>
                             <constraint firstItem="itG-uV-fTv" firstAttribute="leading" secondItem="iCl-2E-P6p" secondAttribute="leadingMargin" constant="25" id="f3z-DL-j9F"/>
+                            <constraint firstItem="YjL-GN-nJe" firstAttribute="top" secondItem="itG-uV-fTv" secondAttribute="bottom" constant="39" id="fW4-iB-w4L"/>
                             <constraint firstAttribute="trailing" secondItem="JoJ-ZH-y7t" secondAttribute="trailing" id="fvf-Px-1G4"/>
+                            <constraint firstItem="YjL-GN-nJe" firstAttribute="leading" secondItem="iCl-2E-P6p" secondAttribute="leadingMargin" constant="60" id="hsj-cS-fQd"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -150,7 +168,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fcJ-ez-32K" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="V6N-Hg-jx2">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V6N-Hg-jx2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

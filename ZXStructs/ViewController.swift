@@ -49,7 +49,12 @@ class ViewController: UIViewController {
         self.zx_clearNavbarBackButtonTitle()
         
         self.zx_navbarAddBarButtonItems(iconFontTexts: [code2,code3], fontSize: 30, color: UIColor.orange, position: .left)
-        self.zx_navbarAddBarButtonItems(textNames: ["Call"], font: nil, color: nil, position: .right)
+        self.zx_navbarAddBarButtonItems(textNames: ["Call"], font: nil, color: UIColor.white, position: .right)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.zx_setnavbarBackgroundColor(UIColor.zx_navBarColor)
     }
     
     override func zx_leftBarButtonAction(index: Int) {

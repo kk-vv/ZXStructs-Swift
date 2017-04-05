@@ -15,6 +15,7 @@ class ZXDetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.zx_navbarAddBarButtonItems(imageNames: ["r1","r2"], useOriginalColor: true, position: .right)
+        self.view.backgroundColor = UIColor.zx_backgroundColor
     }
     
     override func zx_rightBarButtonAction(index: Int) {
@@ -28,7 +29,18 @@ class ZXDetailViewController: UIViewController {
             self.zx_navbarAddBarButtonItems(imageNames: ["r1","r2"], useOriginalColor: true, position: .right)
         }
     }
+    
+    @IBAction func changeColor(_ sender: UIButton) {
+        let r = (CGFloat)(arc4random() % 255) / 255.0
+        let g = (CGFloat)(arc4random() % 255) / 255.0
+        let b = (CGFloat)(arc4random() % 255) / 255.0
+        self.zx_setnavbarBackgroundColor(UIColor(red: r, green: g, blue: b, alpha: 1.0))
+    }
 
+    @IBAction func clearColor(_ sender: Any) {
+        self.zx_setnavbarBackgroundColor(UIColor.clear)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

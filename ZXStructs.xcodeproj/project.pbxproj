@@ -204,9 +204,9 @@
 				6A7D28E31E94C692005BBFD9 /* ZXConfigValueProtocol.swift */,
 				6A7D28E41E94C692005BBFD9 /* ZXFontConfig.swift */,
 				6A7D28E51E94C692005BBFD9 /* ZXNavBarConfig.swift */,
-				6A7D28E61E94C692005BBFD9 /* ZXSettings.bundle */,
 				6A7D28E71E94C692005BBFD9 /* ZXTintColorConfig.swift */,
 				6A7D28E81E94C692005BBFD9 /* ZXUIConfig.swift */,
+				6A7D28E61E94C692005BBFD9 /* ZXSettings.bundle */,
 			);
 			path = ZXConfig;
 			sourceTree = "<group>";
