@@ -15,6 +15,7 @@
 		6A6658741E95D0C20046C81E /* ZXTextFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6658731E95D0C20046C81E /* ZXTextFViewController.swift */; };
 		6A6658761E95DC0A0046C81E /* ZXTabbarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6658751E95DC0A0046C81E /* ZXTabbarConfig.swift */; };
 		6A66587A1E960F4F0046C81E /* UIViewController+ZXNavControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6658791E960F4F0046C81E /* UIViewController+ZXNavControl.swift */; };
+		6A66587C1E9611450046C81E /* UITabbarController+ZX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A66587B1E9611450046C81E /* UITabbarController+ZX.swift */; };
 		6A7D28BB1E9492EA005BBFD9 /* ZXDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D28BA1E9492EA005BBFD9 /* ZXDetailViewController.swift */; };
 		6A7D28D11E949994005BBFD9 /* Bundle+ZX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D28BD1E949994005BBFD9 /* Bundle+ZX.swift */; };
 		6A7D28D21E949994005BBFD9 /* String+ZX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D28BE1E949994005BBFD9 /* String+ZX.swift */; };
@@ -45,6 +46,7 @@
 		6A6658731E95D0C20046C81E /* ZXTextFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXTextFViewController.swift; sourceTree = "<group>"; };
 		6A6658751E95DC0A0046C81E /* ZXTabbarConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXTabbarConfig.swift; sourceTree = "<group>"; };
 		6A6658791E960F4F0046C81E /* UIViewController+ZXNavControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ZXNavControl.swift"; sourceTree = "<group>"; };
+		6A66587B1E9611450046C81E /* UITabbarController+ZX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabbarController+ZX.swift"; sourceTree = "<group>"; };
 		6A7D28BA1E9492EA005BBFD9 /* ZXDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXDetailViewController.swift; sourceTree = "<group>"; };
 		6A7D28BD1E949994005BBFD9 /* Bundle+ZX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+ZX.swift"; sourceTree = "<group>"; };
 		6A7D28BE1E949994005BBFD9 /* String+ZX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ZX.swift"; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				6A7D28C11E949994005BBFD9 /* UIFont+ZX.swift */,
 				6A7D28F31E94DC35005BBFD9 /* UIViewController+ZX.swift */,
 				6A6658791E960F4F0046C81E /* UIViewController+ZXNavControl.swift */,
+				6A66587B1E9611450046C81E /* UITabbarController+ZX.swift */,
 			);
 			path = ZXExtension;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				6A557D931E8DF59A00904791 /* AppDelegate.swift in Sources */,
 				6A7D28EA1E94C692005BBFD9 /* ZXFontConfig.swift in Sources */,
 				6A7D28D21E949994005BBFD9 /* String+ZX.swift in Sources */,
+				6A66587C1E9611450046C81E /* UITabbarController+ZX.swift in Sources */,
 				6A7D28BB1E9492EA005BBFD9 /* ZXDetailViewController.swift in Sources */,
 				6A7D28D41E949994005BBFD9 /* UIDevice+ZX.swift in Sources */,
 				6A6658741E95D0C20046C81E /* ZXTextFViewController.swift in Sources */,

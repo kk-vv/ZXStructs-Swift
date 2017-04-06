@@ -2,7 +2,7 @@
 //  ZXDetailViewController.swift
 //  ZXStructs
 //
-//  Created by screson on 2017/4/5.
+//  Created by JuanFelix on 2017/4/5.
 //  Copyright © 2017年 screson. All rights reserved.
 //
 
