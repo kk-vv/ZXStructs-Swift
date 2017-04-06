@@ -7,23 +7,23 @@
 	<key>zx_isTranslucent</key>
 	<false/>
 	<key>zx_backgroundColor</key>
-	<string>#3B87EE</string>
+	<string>#2c4c50</string>
 	<key>zx_titleNormalColor</key>
 	<string>#afaaae</string>
 	<key>zx_titleSelectedColor</key>
 	<string>#3b87ef</string>
 	<key>zx_customTitleFont</key>
-	<false/>
+	<true/>
 	<key>zx_customTitleFontName</key>
-	<string>PingFangSC-Light</string>
+	<string>Snell Roundhand</string>
 	<key>zx_customTitleFontSize</key>
 	<dict>
 		<key>4_0</key>
-		<integer>10</integer>
+		<integer>15</integer>
 		<key>4_7</key>
-		<integer>12</integer>
+		<integer>20</integer>
 		<key>5_5</key>
-		<integer>12</integer>
+		<integer>15</integer>
 	</dict>
 	<key>zx_barItems</key>
 	<array>
@@ -37,7 +37,7 @@
 			<key>selectedImage</key>
 			<string></string>
 			<key>title</key>
-			<string>订单</string>
+			<string>商城</string>
 		</dict>
 		<dict>
 			<key>showAsPresent</key>
@@ -49,7 +49,19 @@
 			<key>selectedImage</key>
 			<string></string>
 			<key>title</key>
-			<string>订单</string>
+			<string>发现</string>
+		</dict>
+		<dict>
+			<key>showAsPresent</key>
+			<true/>
+			<key>embedInNavigation</key>
+			<true/>
+			<key>normalImage</key>
+			<string></string>
+			<key>selectedImage</key>
+			<string></string>
+			<key>title</key>
+			<string>地图</string>
 		</dict>
 		<dict>
 			<key>showAsPresent</key>
@@ -61,7 +73,7 @@
 			<key>selectedImage</key>
 			<string></string>
 			<key>title</key>
-			<string>订单</string>
+			<string>购物车</string>
 		</dict>
 		<dict>
 			<key>showAsPresent</key>
@@ -73,7 +85,7 @@
 			<key>selectedImage</key>
 			<string></string>
 			<key>title</key>
-			<string>订单</string>
+			<string>我的</string>
 		</dict>
 	</array>
 </dict>

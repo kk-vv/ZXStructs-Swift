@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ZXTabbarItemModel:NSObject {
+class ZXTabbarItem:NSObject {
     var embedInNavigation:  Bool    = true
     var showAsPresent:      Bool    = false
     var normalImage:        String  = ""
@@ -72,12 +72,12 @@ class ZXTabbarConfig: NSObject {
         return configStringValue(forKey: "zx_titleSelectedColor", defaultValue: "#ff0000")
     }
     
-    class var barItems: [ZXTabbarItemModel] {
-        var arrItems: [ZXTabbarItemModel] = []
+    class var barItems: [ZXTabbarItem] {
+        var arrItems: [ZXTabbarItem] = []
         if let items = zxTarbarConfig().object(forKey: "zx_barItems") as? Array<Dictionary<String,Any>> {
             print(items)
             for item in items {
-                arrItems.append(ZXTabbarItemModel(item))
+                arrItems.append(ZXTabbarItem(item))
             }
         }
         return arrItems
