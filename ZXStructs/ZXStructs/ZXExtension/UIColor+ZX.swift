@@ -18,6 +18,10 @@ extension UIColor {
         return zx_colorWithHexString(ZXTintColorConfig.tintColorStr)
     }
     
+    class var zx_subTintColor: UIColor! {
+        return zx_colorWithHexString(ZXTintColorConfig.subTintColorStr)
+    }
+    
     class var zx_backgroundColor: UIColor! {
         return zx_colorWithHexString(ZXTintColorConfig.backgrounColorStr)
     }
@@ -65,6 +69,19 @@ extension UIColor {
     
     class var zx_navBarButtonColor: UIColor! {
         return zx_colorWithHexString(ZXNavBarConfig.barButtonColor)
+    }
+    
+    //MARK: - Tabbar-Color
+    class var zx_tabBarColor: UIColor! {
+        return zx_colorWithHexString(ZXTabbarConfig.backgroundColorStr)
+    }
+    
+    class var zx_tabBarTitleNormalColor: UIColor {
+        return zx_colorWithHexString(ZXTabbarConfig.titleNormalColorStr)
+    }
+    
+    class var zx_tabBarTitleSelectedColor: UIColor {
+        return zx_colorWithHexString(ZXTabbarConfig.titleSelectedColorStr)
     }
     
     //MARK: - Color With HEX

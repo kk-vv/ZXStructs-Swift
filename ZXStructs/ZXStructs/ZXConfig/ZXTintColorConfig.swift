@@ -11,14 +11,25 @@ import UIKit
 
 class ZXTintColorConfig: NSObject {
     //MARK: - Config Dic
-    class var tintColorConfig: NSDictionary {
-        return NSDictionary.init(contentsOfFile: Bundle.zx_tintColorConfigPath())!
+    static var config: NSDictionary?
+    class func zxTintColorConfig() -> NSDictionary!{
+        guard let cfg = config else {
+            config = NSDictionary.init(contentsOfFile: Bundle.zx_tintColorConfigPath())!
+            return config
+        }
+        return cfg
     }
+    
     //MARK: - Color Hex String
+    //[#ff0000]: Red Color means config failed!
     class var tintColorStr: String! {
         return configStringValue(forKey:"zx_tintColor", defaultValue: "#ff0000")
     }
     
+    class var subTintColorStr: String! {
+        return configStringValue(forKey:"zx_subTintColor", defaultValue: "#ff0000")
+    }
+
     class var backgrounColorStr: String! {
         return configStringValue(forKey:"zx_backgroundColor", defaultValue: "#ff0000")
     }
@@ -47,7 +58,7 @@ class ZXTintColorConfig: NSObject {
 //MARK: Config Value
 extension ZXTintColorConfig: ZXConfigValueProtocol {
     static func configStringValue(forKey key: String!, defaultValue: String!) -> String! {
-        if let colorStr = (tintColorConfig.object(forKey: key) as? String), colorStr.characters.count > 0 {
+        if let colorStr = (zxTintColorConfig().object(forKey: key) as? String), colorStr.characters.count > 0 {
             return colorStr
         }
         return defaultValue

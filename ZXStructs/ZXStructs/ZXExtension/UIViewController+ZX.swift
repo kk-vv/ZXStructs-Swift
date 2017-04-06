@@ -23,36 +23,39 @@ extension UIViewController {
         notificationCenter.removeObserver(self, name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
     }
     
-    func zx_keyboardWillShow(duration dt: Double,notice:Notification) {
+    func zx_keyboardWillShow(duration dt: Double,userInfo:Dictionary<String,Any>) {
         
     }
     
-    func zx_keyboardWillHide(duration dt: Double,notice:Notification) {
+    func zx_keyboardWillHide(duration dt: Double,userInfo:Dictionary<String,Any>) {
         
     }
     
-    func zx_keyboardWillChangeFrame(beginRect rect1:CGRect,endRect rect2: CGRect,duration dt:Double,notice:Notification) {
+    func zx_keyboardWillChangeFrame(beginRect:CGRect,endRect: CGRect,duration dt:Double,userInfo:Dictionary<String,Any>) {
         
     }
     
     //MARK: - 
     final func xxx_baseKeyboardWillShow(notice:Notification) {
         if let userInfo = notice.userInfo as? Dictionary<String, Any> {
-//            zx_keyboardWillShow(duration: userInfo, notice: Notification)
+            let dt = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! Double
+            zx_keyboardWillShow(duration: dt, userInfo:userInfo )
         }
-//         [self zx_keyboardWillShowTimeInteval:[notice.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue] notice:notice];
     }
     
     final func xxx_baseKeyboardWillHide(notice:Notification) {
-//        [self zx_keyboardWillHideTimeInteval:[notice.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue] notice:notice];
-        
+        if let userInfo = notice.userInfo as? Dictionary<String, Any> {
+            let dt = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! Double
+            zx_keyboardWillHide(duration: dt, userInfo: userInfo)
+        }
     }
     
     final func xxx_baseKeyboardWillChangeFrame(notice:Notification) {
-//        CGRect beginKeyboardRect = [[notice.userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue];
-//        CGRect endKeyboardRect = [[notice.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
-//        [self zx_keyboardWillChangeFrameBeginRect:beginKeyboardRect endRect:endKeyboardRect timeInterval:[notice.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue] notice:notice];
+        if let userInfo = notice.userInfo as? Dictionary<String, Any> {
+            let beginRect   = userInfo[UIKeyboardFrameBeginUserInfoKey] as! CGRect
+            let endRect     = userInfo[UIKeyboardFrameEndUserInfoKey] as! CGRect
+            let dt          = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! Double
+            zx_keyboardWillChangeFrame(beginRect: beginRect, endRect: endRect, duration: dt, userInfo: userInfo)
+        }
     }
-    
-    
 }

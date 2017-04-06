@@ -2,35 +2,79 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>zx_userSystemBackButton</key>
-	<false/>
 	<key>zx_showSeparatorLine</key>
-	<true/>
+	<false/>
 	<key>zx_isTranslucent</key>
-	<true/>
-	<key>zx_navBarColor</key>
+	<false/>
+	<key>zx_backgroundColor</key>
 	<string>#3B87EE</string>
-	<key>zx_titleColor</key>
-	<string>#ffffff</string>
-	<key>zx_barButtonColor</key>
-	<string>#c8c800</string>
-	<key>zx_titleFontSize</key>
+	<key>zx_titleNormalColor</key>
+	<string>#afaaae</string>
+	<key>zx_titleSelectedColor</key>
+	<string>#3b87ef</string>
+	<key>zx_customTitleFont</key>
+	<false/>
+	<key>zx_customTitleFontName</key>
+	<string>PingFangSC-Light</string>
+	<key>zx_customTitleFontSize</key>
 	<dict>
 		<key>4_0</key>
-		<integer>18</integer>
+		<integer>10</integer>
 		<key>4_7</key>
-		<integer>21</integer>
+		<integer>12</integer>
 		<key>5_5</key>
-		<integer>21</integer>
+		<integer>12</integer>
 	</dict>
-	<key>zx_barButtonFontSize</key>
-	<dict>
-		<key>4_0</key>
-		<integer>16</integer>
-		<key>4_7</key>
-		<integer>17</integer>
-		<key>5_5</key>
-		<integer>18</integer>
-	</dict>
+	<key>zx_barItems</key>
+	<array>
+		<dict>
+			<key>showAsPresent</key>
+			<false/>
+			<key>embedInNavigation</key>
+			<true/>
+			<key>normalImage</key>
+			<string></string>
+			<key>selectedImage</key>
+			<string></string>
+			<key>title</key>
+			<string>订单</string>
+		</dict>
+		<dict>
+			<key>showAsPresent</key>
+			<false/>
+			<key>embedInNavigation</key>
+			<true/>
+			<key>normalImage</key>
+			<string></string>
+			<key>selectedImage</key>
+			<string></string>
+			<key>title</key>
+			<string>订单</string>
+		</dict>
+		<dict>
+			<key>showAsPresent</key>
+			<false/>
+			<key>embedInNavigation</key>
+			<true/>
+			<key>normalImage</key>
+			<string></string>
+			<key>selectedImage</key>
+			<string></string>
+			<key>title</key>
+			<string>订单</string>
+		</dict>
+		<dict>
+			<key>showAsPresent</key>
+			<false/>
+			<key>embedInNavigation</key>
+			<true/>
+			<key>normalImage</key>
+			<string></string>
+			<key>selectedImage</key>
+			<string></string>
+			<key>title</key>
+			<string>订单</string>
+		</dict>
+	</array>
 </dict>
 </plist>

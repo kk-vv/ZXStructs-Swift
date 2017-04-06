@@ -10,9 +10,15 @@ import UIKit
 
 class ZXFontConfig: NSObject {
     //MARK: - Config Dic
-    class var zxFontConfig: NSDictionary {
-        return NSDictionary.init(contentsOfFile: Bundle.zx_fontConfigPath())!
+    static var config: NSDictionary?
+    class func zxFontConfig() -> NSDictionary!{
+        guard let cfg = config else {
+            config = NSDictionary.init(contentsOfFile: Bundle.zx_fontConfigPath())!
+            return config
+        }
+        return cfg
     }
+    
     //MARK: - Font Name
     class var fontNameTitle:String! {
         return configStringValue(forKey: "zx_fontNameTitle", defaultValue:"Arial")
@@ -64,14 +70,14 @@ class ZXFontConfig: NSObject {
 
 extension ZXFontConfig: ZXConfigValueProtocol {
     static func configStringValue(forKey key: String!, defaultValue: String!) -> String! {
-        if let fontNameStr = (zxFontConfig.object(forKey: key) as? String), fontNameStr.characters.count > 0{
+        if let fontNameStr = (zxFontConfig().object(forKey: key) as? String), fontNameStr.characters.count > 0{
             return fontNameStr
         }
         return defaultValue
     }
     
     static func configFontSizeValue(forKey key:String,defaultSize:CGFloat) -> CGFloat {
-        if let dicF = zxFontConfig.object(forKey: key) as? NSDictionary {
+        if let dicF = zxFontConfig().object(forKey: key) as? NSDictionary {
             switch UIDevice.zx_DeviceSizeType() {
             case .s_4_0Inch:
                 return dicF.object(forKey: "4_0") as! CGFloat

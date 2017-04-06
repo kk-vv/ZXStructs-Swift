@@ -9,9 +9,14 @@
 import UIKit
 
 class ZXNavBarConfig: NSObject {
-    
-    class var zxNavBarConfig: NSDictionary {
-        return NSDictionary(contentsOfFile: Bundle.zx_navBarConfigPath())!
+    //MARK: - Config Dic
+    static var config: NSDictionary?
+    class func zxNavBarConfig() -> NSDictionary!{
+        guard let cfg = config else {
+            config = NSDictionary.init(contentsOfFile: Bundle.zx_navBarConfigPath())!
+            return config
+        }
+        return cfg
     }
     
     //MARK: - Bool Value
@@ -28,7 +33,7 @@ class ZXNavBarConfig: NSObject {
     }
     //MARK: - Color Hex String
     class var narBarColorStr: String {
-        return configStringValue(forKey: "zx_navBarColor", defaultValue: "#3B87EE")
+        return configStringValue(forKey: "zx_navBarColor", defaultValue: "#ff0000")
     }
     
     class var titleColorStr: String {
@@ -60,14 +65,14 @@ class ZXNavBarConfig: NSObject {
 
 extension ZXNavBarConfig: ZXConfigValueProtocol{
     static func configStringValue(forKey key: String!, defaultValue: String!) -> String! {
-        if let configStr = (zxNavBarConfig.object(forKey: key) as? String),configStr.characters.count > 0 {
+        if let configStr = (zxNavBarConfig().object(forKey: key) as? String),configStr.characters.count > 0 {
             return configStr
         }
         return defaultValue
     }
     
     static func configFontSizeValue(forKey key:String,defaultSize:CGFloat) -> CGFloat {
-        if let dicF = zxNavBarConfig.object(forKey: key) as? NSDictionary {
+        if let dicF = zxNavBarConfig().object(forKey: key) as? NSDictionary {
             switch UIDevice.zx_DeviceSizeType() {
             case .s_4_0Inch:
                 return dicF.object(forKey: "4_0") as! CGFloat
@@ -83,7 +88,7 @@ extension ZXNavBarConfig: ZXConfigValueProtocol{
     }
     
     static func configBoolValue(forKey key:String, defaultValue: Bool) -> Bool {
-        if let boolValue = zxNavBarConfig.object(forKey: key) as? Bool {
+        if let boolValue = zxNavBarConfig().object(forKey: key) as? Bool {
             return boolValue
         }
         return defaultValue

@@ -11,5 +11,6 @@ import UIKit
 class ZXStructs: NSObject {
     class func loadUIConfig()  {
         ZXUIConfig.loadnavBarConfig()
+        ZXUIConfig.loadtabBarConfig()
     }
 }

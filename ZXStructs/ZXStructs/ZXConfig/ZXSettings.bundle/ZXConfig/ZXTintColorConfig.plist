@@ -4,6 +4,8 @@
 <dict>
 	<key>zx_tintColor</key>
 	<string>#3b87ef</string>
+	<key>zx_subTintColor</key>
+	<string>#eff7fd</string>
 	<key>zx_backgroundColor</key>
 	<string>#eff7fd</string>
 	<key>zx_borderColor</key>
