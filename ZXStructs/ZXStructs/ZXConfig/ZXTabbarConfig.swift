@@ -79,7 +79,6 @@ class ZXTabbarConfig: NSObject {
     class var barItems: [ZXTabbarItem] {
         var arrItems: [ZXTabbarItem] = []
         if let items = zxTarbarConfig().object(forKey: "zx_barItems") as? Array<Dictionary<String,Any>> {
-            print(items)
             for item in items {
                 arrItems.append(ZXTabbarItem(item))
             }

@@ -30,7 +30,7 @@ extension UIViewController {
     ///   - names: image names
     ///   - useOriginalColor: (true - imageColor false - bar tintcolor)
     ///   - position: .left .right
-    func zx_navbarAddBarButtonItems(imageNames names:Array<String>,useOriginalColor:Bool, position:ZXNavBarButtonItemPosition) {
+    func zx_navbarAddBarButtonItems(imageNames names:Array<String>,useOriginalColor:Bool,at position:ZXNavBarButtonItemPosition) {
         if names.count > 0 {
             var items: Array<UIBarButtonItem> = Array()
             var n = 0
@@ -56,13 +56,13 @@ extension UIViewController {
             if position == .left {
                 self.navigationItem.leftBarButtonItems = items
             }else{
-                self.navigationItem.rightBarButtonItems = items;
+                self.navigationItem.rightBarButtonItems = items
             }
         }else{
             if position == .left {
                 self.navigationItem.leftBarButtonItem = nil
             }else{
-                self.navigationItem.rightBarButtonItem = nil;
+                self.navigationItem.rightBarButtonItem = nil
             }
         }
         //self.navigationController?.navigationBar.topItem?.xxx_ButtonItem 效果不对
@@ -76,7 +76,7 @@ extension UIViewController {
     ///   - font: text font (Default:ZXNavBarConfig.navTilteFont)
     ///   - color: text color (Default:UIColor.zx_navBarButtonColor)
     ///   - position: .left .right
-    func zx_navbarAddBarButtonItems(textNames names:Array<String>,font:UIFont?,color:UIColor?, position:ZXNavBarButtonItemPosition) {
+    func zx_navbarAddBarButtonItems(textNames names:Array<String>,font:UIFont?,color:UIColor?,at position:ZXNavBarButtonItemPosition) {
         if names.count > 0 {
             var items: Array<UIBarButtonItem> = Array()
             var n = 0
@@ -99,13 +99,13 @@ extension UIViewController {
             if position == .left {
                 self.navigationItem.leftBarButtonItems = items
             }else{
-                self.navigationItem.rightBarButtonItems = items;
+                self.navigationItem.rightBarButtonItems = items
             }
         }else{
             if position == .left {
                 self.navigationItem.leftBarButtonItem = nil
             }else{
-                self.navigationItem.rightBarButtonItem = nil;
+                self.navigationItem.rightBarButtonItem = nil
             }
         }
     }
@@ -118,7 +118,7 @@ extension UIViewController {
     ///   - size: font size
     ///   - color: font color (Default UIColor.zx_navBarButtonColor)
     ///   - position: .left .right
-    func zx_navbarAddBarButtonItems(iconFontTexts names:Array<String>,fontSize size:CGFloat,color:UIColor?, position:ZXNavBarButtonItemPosition) {
+    func zx_navbarAddBarButtonItems(iconFontTexts names:Array<String>,fontSize size:CGFloat,color:UIColor?,at position:ZXNavBarButtonItemPosition) {
         if names.count > 0 {
             var items: Array<UIBarButtonItem> = Array()
             var n = 0
@@ -141,14 +141,30 @@ extension UIViewController {
             if position == .left {
                 self.navigationItem.leftBarButtonItems = items
             }else{
-                self.navigationItem.rightBarButtonItems = items;
+                self.navigationItem.rightBarButtonItems = items
             }
         }else{
             if position == .left {
                 self.navigationItem.leftBarButtonItem = nil
             }else{
-                self.navigationItem.rightBarButtonItem = nil;
+                self.navigationItem.rightBarButtonItem = nil
             }
+        }
+    }
+    
+    func zx_navbarAddBarButtonItem(customView view:UIView!,at position:ZXNavBarButtonItemPosition) {
+        var items: Array<UIBarButtonItem> = Array()
+        let negativeSpacer = UIBarButtonItem.init(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+        negativeSpacer.width = zx_navFixSapce
+        items.append(negativeSpacer)
+        
+        let itemT = UIBarButtonItem.init(customView: view)
+        items.append(itemT)
+        
+        if position == .left {
+            self.navigationItem.leftBarButtonItems = items
+        }else{
+            self.navigationItem.rightBarButtonItems = items
         }
     }
     

@@ -14,7 +14,7 @@ class ZXDetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.zx_navbarAddBarButtonItems(imageNames: ["r1","r2"], useOriginalColor: true, position: .right)
+        self.zx_navbarAddBarButtonItems(imageNames: ["r1","r2"], useOriginalColor: true, at: .right)
         self.view.backgroundColor = UIColor.zx_backgroundColor
         
         self.zx_clearNavbarBackButtonTitle()
@@ -31,9 +31,9 @@ class ZXDetailViewController: UIViewController {
     
     @IBAction func switchAction(_ sender: UISwitch) {
         if !sender.isOn {
-            self.zx_navbarAddBarButtonItems(imageNames: ["r1","r2"], useOriginalColor: false, position: .right)//红色来源于ZXNarBarConfig.plist中配置
+            self.zx_navbarAddBarButtonItems(imageNames: ["r1","r2"], useOriginalColor: false, at: .right)//红色来源于ZXNarBarConfig.plist中配置
         }else{
-            self.zx_navbarAddBarButtonItems(imageNames: ["r1","r2"], useOriginalColor: true, position: .right)
+            self.zx_navbarAddBarButtonItems(imageNames: ["r1","r2"], useOriginalColor: true, at: .right)
         }
     }
     

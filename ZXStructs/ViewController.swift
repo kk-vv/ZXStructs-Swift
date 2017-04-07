@@ -30,13 +30,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
+        //Main UI Color
         self.view.backgroundColor = UIColor.zx_backgroundColor
         
         testView.backgroundColor = UIColor.zx_tintColor
         testView.layer.borderWidth = 3
         testView.layer.borderColor = UIColor.zx_borderColor.cgColor
-        
-        print(UIDevice.zx_DeviceSizeType().description());
         
         //Text Color
         self.lbTitle.textColor  = UIColor.zx_textColorTitle //Title Color
@@ -57,8 +56,8 @@ class ViewController: UIViewController {
         self.zx_clearNavbarBackButtonTitle()
         
         //Add Bar Button Item
-        self.zx_navbarAddBarButtonItems(iconFontTexts: [code2,code3], fontSize: 30, color: UIColor.orange, position: .left)
-        self.zx_navbarAddBarButtonItems(textNames: ["Call"], font: nil, color: UIColor.white, position: .right)
+        self.zx_navbarAddBarButtonItems(iconFontTexts: [code2,code3], fontSize: 30, color: UIColor.orange, at: .left)
+        self.zx_navbarAddBarButtonItems(textNames: ["Call"], font: nil, color: UIColor.white, at: .right)
     }
     
     override func viewWillAppear(_ animated: Bool) {

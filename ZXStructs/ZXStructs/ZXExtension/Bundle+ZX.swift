@@ -39,4 +39,8 @@ extension Bundle{
         let scale: Int = Int(UIScreen.main.scale)
         return zxSettingBundle.path(forResource: "zx_navback@\(scale)x", ofType: "png")!
     }
+    
+    static var zx_projectName: String! {
+        return self.main.infoDictionary!["CFBundleExecutable"] as! String
+    }
 }

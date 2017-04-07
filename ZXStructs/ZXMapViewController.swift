@@ -7,14 +7,18 @@
 //
 
 import UIKit
+import MapKit
 
 class ZXMapViewController: UIViewController {
 
+    @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.zx_navbarAddBarButtonItems(textNames: ["返回"], font: nil, color: UIColor.white, position: .left)
+        self.zx_navbarAddBarButtonItems(textNames: ["返回"], font: nil, color: UIColor.white, at: .left)
+        
+        mapView.setVisibleMapRect(MKMapRectMake(0, 0, 1000, 1000), animated: true)
     }
     
     override func zx_leftBarButtonAction(index: Int) {

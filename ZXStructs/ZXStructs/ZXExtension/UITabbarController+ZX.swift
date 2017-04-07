@@ -85,7 +85,12 @@ extension UITabBarController {
                 return true
             }
             if info.barItem.showAsPresent {
-                if let vcClass = NSClassFromString(info.className) as? UIViewController.Type {
+                var vcClass = NSClassFromString(info.className) as? UIViewController.Type
+                if vcClass == nil {
+                    let className = Bundle.zx_projectName + "." + info.className
+                    vcClass = NSClassFromString(className) as? UIViewController.Type
+                }
+                if let vcClass = vcClass {
                     let vc = vcClass.init()
                     if info.barItem.embedInNavigation,!vc.isKind(of: UINavigationController.self) {
                         tabBarController.present(UINavigationController.init(rootViewController: vc), animated: true, completion: nil)
