@@ -11,6 +11,10 @@ import MapKit
 
 class ZXMapViewController: UIViewController {
 
+    lazy var imagePicker:ZXImagePickerUtils = {
+        return ZXImagePickerUtils()
+    }()
+    @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +28,39 @@ class ZXMapViewController: UIViewController {
     override func zx_leftBarButtonAction(index: Int) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func takePhotoAction(_ sender: Any) {
+        imagePicker.takePhoto(rootVC: self) { [unowned self] (image, status, errorMsg) in
+            if status == .success {
+                self.imgView.image = image
+            }else{
+                ZXAlertUtils.showAlert(withTitle: "提示", message: errorMsg!)
+            }
+        }
+    }
 
+    @IBAction func choosePhotoAction(_ sender: Any) {
+        imagePicker.choosePhoto(rootVC: self) {[unowned self] (image, status, errorMsg) in
+            if status == .success {
+                self.imgView.image = image
+            }else{
+                ZXAlertUtils.showAlert(withTitle: "提示", message: errorMsg!)
+            }
+        }
+    }
+    
+    @IBAction func showAlert(_ sender: Any) {
+        ZXAlertUtils.showAlert(wihtTitle: "Menu", message: "MebuInfo", buttonTexts: ["1","2","3"]) { (index) in
+            print(index)
+        }
+    }
+    
+    @IBAction func showActionSheet(_ sender: Any) {
+        ZXAlertUtils.showActionSheet(withTitle: "Menu", message: "MebuInfo", buttonTexts: ["1","2","3"], cancelText: nil) { (index) in
+            print(index)
+        }
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

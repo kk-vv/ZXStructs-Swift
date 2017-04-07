@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZXMapViewController" customModule="ZXStructs" customModuleProvider="target">
             <connections>
+                <outlet property="imgView" destination="tvK-II-Ml2" id="pre-NP-VLe"/>
                 <outlet property="mapView" destination="uPS-fX-3ij" id="I4n-7H-0or"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,15 +22,60 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uPS-fX-3ij">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="Uni-zc-UBu"/>
+                    </constraints>
                 </mapView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tvK-II-Ml2">
+                    <rect key="frame" x="0.0" y="200" width="375" height="467"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5B-iB-gYM">
+                    <rect key="frame" x="151" y="215" width="73" height="30"/>
+                    <state key="normal" title="TakePhoto"/>
+                    <connections>
+                        <action selector="takePhotoAction:" destination="-1" eventType="touchUpInside" id="phy-eH-pkV"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVZ-hP-zRe">
+                    <rect key="frame" x="141" y="253" width="93" height="30"/>
+                    <state key="normal" title="ChoosePhoto"/>
+                    <connections>
+                        <action selector="choosePhotoAction:" destination="-1" eventType="touchUpInside" id="2F4-KX-mg4"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rri-zJ-Z01">
+                    <rect key="frame" x="152" y="291" width="70" height="30"/>
+                    <state key="normal" title="ShowAlert"/>
+                    <connections>
+                        <action selector="showAlert:" destination="-1" eventType="touchUpInside" id="nm2-lH-bsg"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgf-sX-dpZ">
+                    <rect key="frame" x="127" y="318" width="121" height="30"/>
+                    <state key="normal" title="ShowActionSheet"/>
+                    <connections>
+                        <action selector="showActionSheet:" destination="-1" eventType="touchUpInside" id="oub-Xm-pyG"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="tgf-sX-dpZ" firstAttribute="top" secondItem="rri-zJ-Z01" secondAttribute="bottom" constant="-3" id="9jH-qn-W8i"/>
+                <constraint firstItem="tgf-sX-dpZ" firstAttribute="centerX" secondItem="rri-zJ-Z01" secondAttribute="centerX" id="D50-uM-niZ"/>
+                <constraint firstItem="D5B-iB-gYM" firstAttribute="top" secondItem="uPS-fX-3ij" secondAttribute="bottom" constant="15" id="GJR-rZ-e3P"/>
                 <constraint firstItem="uPS-fX-3ij" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JFX-NK-AeS"/>
-                <constraint firstAttribute="bottom" secondItem="uPS-fX-3ij" secondAttribute="bottom" id="MhE-gh-811"/>
                 <constraint firstItem="uPS-fX-3ij" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PEr-z3-BHY"/>
+                <constraint firstItem="rri-zJ-Z01" firstAttribute="centerX" secondItem="PVZ-hP-zRe" secondAttribute="centerX" id="Smd-W5-Ocd"/>
+                <constraint firstItem="PVZ-hP-zRe" firstAttribute="top" secondItem="D5B-iB-gYM" secondAttribute="bottom" constant="8" id="XTX-h1-6GE"/>
+                <constraint firstAttribute="trailing" secondItem="tvK-II-Ml2" secondAttribute="trailing" id="cQg-5I-xgX"/>
+                <constraint firstItem="tvK-II-Ml2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cv2-Kh-oe9"/>
+                <constraint firstItem="PVZ-hP-zRe" firstAttribute="centerX" secondItem="D5B-iB-gYM" secondAttribute="centerX" id="kC9-Kc-wzZ"/>
+                <constraint firstAttribute="bottom" secondItem="tvK-II-Ml2" secondAttribute="bottom" id="oHT-wd-639"/>
+                <constraint firstItem="tvK-II-Ml2" firstAttribute="top" secondItem="uPS-fX-3ij" secondAttribute="bottom" id="qSC-w5-tTK"/>
                 <constraint firstAttribute="trailing" secondItem="uPS-fX-3ij" secondAttribute="trailing" id="td3-KU-gea"/>
+                <constraint firstItem="rri-zJ-Z01" firstAttribute="top" secondItem="PVZ-hP-zRe" secondAttribute="bottom" constant="8" id="tff-xQ-0Lf"/>
+                <constraint firstItem="D5B-iB-gYM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wGX-E7-tdn"/>
             </constraints>
             <point key="canvasLocation" x="25.5" y="52.5"/>
         </view>

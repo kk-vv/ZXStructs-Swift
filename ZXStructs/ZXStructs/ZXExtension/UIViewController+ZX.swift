@@ -58,4 +58,17 @@ extension UIViewController {
             zx_keyboardWillChangeFrame(beginRect: beginRect, endRect: endRect, duration: dt, userInfo: userInfo)
         }
     }
+    
+    //MARK: - Common
+    class func zx_keyController() -> UIViewController! {
+        var keyVC = UIApplication.shared.keyWindow?.rootViewController
+        repeat{
+            if let presentedVC = keyVC?.presentedViewController {
+                keyVC = presentedVC
+            }else {
+                break
+            }
+        } while ((keyVC?.presentedViewController) != nil)
+        return keyVC
+    }
 }
