@@ -1,0 +1,40 @@
+//
+//  ZXMapViewController.swift
+//  ZXStructs
+//
+//  Created by JuanFelix on 2017/4/7.
+//  Copyright © 2017年 screson. All rights reserved.
+//
+
+import UIKit
+
+class ZXMapViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+        self.zx_navbarAddBarButtonItems(textNames: ["返回"], font: nil, color: UIColor.white, position: .left)
+    }
+    
+    override func zx_leftBarButtonAction(index: Int) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}

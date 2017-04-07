@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>zx_showSeparatorLine</key>
-	<false/>
+	<true/>
 	<key>zx_isTranslucent</key>
-	<false/>
+	<true/>
 	<key>zx_backgroundColor</key>
-	<string>#2c4c50</string>
+	<string>#ffffff</string>
 	<key>zx_titleNormalColor</key>
 	<string>#afaaae</string>
 	<key>zx_titleSelectedColor</key>
@@ -19,11 +19,11 @@
 	<key>zx_customTitleFontSize</key>
 	<dict>
 		<key>4_0</key>
-		<integer>15</integer>
+		<integer>10</integer>
 		<key>4_7</key>
-		<integer>20</integer>
+		<integer>12</integer>
 		<key>5_5</key>
-		<integer>15</integer>
+		<integer>12</integer>
 	</dict>
 	<key>zx_barItems</key>
 	<array>
@@ -31,11 +31,11 @@
 			<key>showAsPresent</key>
 			<false/>
 			<key>embedInNavigation</key>
-			<true/>
+			<false/>
 			<key>normalImage</key>
-			<string></string>
+			<string>tabbarIcon1-normal</string>
 			<key>selectedImage</key>
-			<string></string>
+			<string>tabbarIcon1-selected</string>
 			<key>title</key>
 			<string>商城</string>
 		</dict>
@@ -45,9 +45,9 @@
 			<key>embedInNavigation</key>
 			<true/>
 			<key>normalImage</key>
-			<string></string>
+			<string>tabbarIcon2-normal</string>
 			<key>selectedImage</key>
-			<string></string>
+			<string>tabbarIcon2-selected</string>
 			<key>title</key>
 			<string>发现</string>
 		</dict>
@@ -57,9 +57,9 @@
 			<key>embedInNavigation</key>
 			<true/>
 			<key>normalImage</key>
-			<string></string>
+			<string>tabbarIcon3-normal</string>
 			<key>selectedImage</key>
-			<string></string>
+			<string>tabbarIcon3-selected</string>
 			<key>title</key>
 			<string>地图</string>
 		</dict>
@@ -69,9 +69,9 @@
 			<key>embedInNavigation</key>
 			<true/>
 			<key>normalImage</key>
-			<string></string>
+			<string>tabbarIcon4-normal</string>
 			<key>selectedImage</key>
-			<string></string>
+			<string>tabbarIcon4-selected</string>
 			<key>title</key>
 			<string>购物车</string>
 		</dict>
@@ -81,9 +81,9 @@
 			<key>embedInNavigation</key>
 			<true/>
 			<key>normalImage</key>
-			<string></string>
+			<string>tabbarIcon5-normal</string>
 			<key>selectedImage</key>
-			<string></string>
+			<string>tabbarIcon5-selected</string>
 			<key>title</key>
 			<string>我的</string>
 		</dict>

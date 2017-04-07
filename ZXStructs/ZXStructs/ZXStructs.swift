@@ -10,7 +10,16 @@ import UIKit
 
 class ZXStructs: NSObject {
     class func loadUIConfig()  {
-        ZXUIConfig.loadnavBarConfig()
-        ZXUIConfig.loadtabBarConfig()
+        self.loadnavBarConfig()
+        self.loadtabBarConfig()
     }
+    
+    class func loadnavBarConfig() {
+        ZXNavBarConfig.active()
+    }
+    
+    class func loadtabBarConfig() {
+        ZXTabbarConfig.active()
+    }
+    
 }

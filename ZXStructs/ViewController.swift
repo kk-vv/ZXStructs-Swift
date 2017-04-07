@@ -20,10 +20,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var lbMark: UILabel!
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var lbBody: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.title = "Home Page"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.title = "Home Page"
 
         self.view.backgroundColor = UIColor.zx_backgroundColor
         
@@ -33,21 +38,25 @@ class ViewController: UIViewController {
         
         print(UIDevice.zx_DeviceSizeType().description());
         
-        self.lbTitle.textColor  = UIColor.zx_textColorTitle
-        self.lbBody.textColor   = UIColor.zx_textColorBody
-        self.lbMark.textColor   = UIColor.zx_textColorMark
+        //Text Color
+        self.lbTitle.textColor  = UIColor.zx_textColorTitle //Title Color
+        self.lbBody.textColor   = UIColor.zx_textColorBody  //Body Color
+        self.lbMark.textColor   = UIColor.zx_textColorMark  //Mark Color
         
-        self.lbTitle.font   = UIFont.zx_titleFont
-        self.lbBody.font    = UIFont.zx_bodyFont
-        self.lbMark.font    = UIFont.zx_markFont
+        //Font
+        self.lbTitle.font   = UIFont.zx_titleFont           //Title Font
+        self.lbBody.font    = UIFont.zx_bodyFont            //Body Font
+        self.lbMark.font    = UIFont.zx_markFont            //Mark Text Font
         //self.lbTitle.font   = UIFont.zx_bodyFont(14)
-        self.lbIconFont.font    = UIFont.zx_iconFont(30)
+        self.lbIconFont.font    = UIFont.zx_iconFont(30)    //Iconfont
         //self.lbIconFont.font    = UIFont(name: UIFont.zx_iconFontName, size: 30)
         //self.lbIconFont.font    = UIFont.zx_iconFont //默认正文字体大小
-        self.lbIconFont.text    =   "Hi,\(code1)"
+        self.lbIconFont.text    =   "IconFont,\(code1)"
         self.lbIconFont.textColor   =   UIColor.zx_customCColor
+        
         self.zx_clearNavbarBackButtonTitle()
         
+        //Add Bar Button Item
         self.zx_navbarAddBarButtonItems(iconFontTexts: [code2,code3], fontSize: 30, color: UIColor.orange, position: .left)
         self.zx_navbarAddBarButtonItems(textNames: ["Call"], font: nil, color: UIColor.white, position: .right)
     }
@@ -57,10 +66,11 @@ class ViewController: UIViewController {
         self.zx_setnavbarBackgroundColor(UIColor.zx_navBarColor)
     }
     
+    //Left Bar Button Action
     override func zx_leftBarButtonAction(index: Int) {
         print("Left Action At Index:\(index)")
     }
-    
+    //Right Bar Button Action
     override func zx_rightBarButtonAction(index: Int) {
         print("Right Action At Index:\(index)")
     }

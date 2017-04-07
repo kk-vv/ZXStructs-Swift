@@ -12,6 +12,7 @@ protocol ZXConfigValueProtocol: class {
     static func configStringValue(forKey key: String!, defaultValue: String!) -> String!
     static func configFontSizeValue(forKey key:String, defaultSize:CGFloat) -> CGFloat
     static func configBoolValue(forKey key:String, defaultValue: Bool) -> Bool
+    static func active()
 }
 
 extension ZXConfigValueProtocol {
@@ -22,5 +23,9 @@ extension ZXConfigValueProtocol {
 
     static func configBoolValue(forKey key:String, defaultValue: Bool) -> Bool {
         return false
+    }
+    
+    static func active(){
+        
     }
 }

@@ -93,4 +93,23 @@ extension ZXNavBarConfig: ZXConfigValueProtocol{
         }
         return defaultValue
     }
+    
+    static func active(){
+        let navBarAppearance = UINavigationBar.appearance()
+        navBarAppearance.isTranslucent  = ZXNavBarConfig.isTranslucent
+        navBarAppearance.barTintColor   = UIColor.zx_navBarColor
+        navBarAppearance.tintColor      = UIColor.zx_navBarButtonColor
+        
+        navBarAppearance.titleTextAttributes = {[NSForegroundColorAttributeName: UIColor.zx_navBarTitleColor,NSFontAttributeName: ZXNavBarConfig.navTilteFont(ZXNavBarConfig.titleFontSize)]}()
+        
+        if !ZXNavBarConfig.showSeparatorLine {
+            navBarAppearance.shadowImage = UIImage()
+            navBarAppearance.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
+        }
+        
+        if !ZXNavBarConfig.userSystemBackButton {
+            navBarAppearance.backIndicatorImage = Bundle.zx_navBackImage()
+            navBarAppearance.backIndicatorTransitionMaskImage = Bundle.zx_navBackImage()
+        }
+    }
 }
