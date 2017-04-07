@@ -29,6 +29,7 @@
                 </mapView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tvK-II-Ml2">
                     <rect key="frame" x="0.0" y="200" width="375" height="467"/>
+                    <color key="tintColor" red="0.3523220486111111" green="0.83713107638888884" blue="0.68720160590277779" alpha="1" colorSpace="calibratedRGB"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5B-iB-gYM">
                     <rect key="frame" x="151" y="215" width="73" height="30"/>

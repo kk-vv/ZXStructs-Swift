@@ -23,13 +23,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = tabBar
         
         //
-        ZXStructs.loadnavBarConfig()
-        ZXStructs.loadtabBarConfig()
-        //ZXStructs.loadUIConfig()
+        //ZXStructs.loadnavBarConfig()
+        //ZXStructs.loadtabBarConfig()
+        ZXStructs.loadUIConfig()
         //1  DemoVC
-        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
-        let demoVC = storyBoard.instantiateViewController(withIdentifier: "ZXDemoNavVC")
-        
+        let storyBoard  = UIStoryboard.init(name: "Main", bundle: nil)
+        let demoVC      = storyBoard.instantiateViewController(withIdentifier: "ZXDemoNavVC")
         tabBar?.zx_addChildViewController(demoVC, fromPlistItemIndex: 0)
         
         //2 MapVC
@@ -45,12 +44,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBar?.zx_addChildViewController(UIViewController.init(), fromPlistItemIndex: 4)
         
         //5 
-        let itemInfo = ZXTabbarItem()
-        itemInfo.title = "不一样"
-        itemInfo.normalImage    = "tabbarIcon4-normal"
-        itemInfo.selectedImage  = "tabbarIcon4-selected"
-        itemInfo.showAsPresent  = false
-        itemInfo.embedInNavigation = true
+        let itemInfo                = ZXTabbarItem()
+        itemInfo.title              = "不一样"
+        itemInfo.normalImage        = "tabbarIcon4-normal"
+        itemInfo.selectedImage      = "tabbarIcon4-selected"
+        itemInfo.showAsPresent      = false
+        itemInfo.embedInNavigation  = true
         tabBar?.zx_addChildViewController(ZXHHViewController(), fromItem: itemInfo)
         
         window?.makeKeyAndVisible()

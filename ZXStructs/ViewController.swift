@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         self.lbTitle.textColor  = UIColor.zx_textColorTitle //Title Color
         self.lbBody.textColor   = UIColor.zx_textColorBody  //Body Color
         self.lbMark.textColor   = UIColor.zx_textColorMark  //Mark Color
-        
+
         //Font
         self.lbTitle.font   = UIFont.zx_titleFont           //Title Font
         self.lbBody.font    = UIFont.zx_bodyFont            //Body Font
