@@ -42,10 +42,12 @@ class ZXDetailViewController: UIViewController {
         let g = (CGFloat)(arc4random() % 255) / 255.0
         let b = (CGFloat)(arc4random() % 255) / 255.0
         self.zx_setnavbarBackgroundColor(UIColor(red: r, green: g, blue: b, alpha: 1.0))
+        self.zx_settabbarBackgroundColor(UIColor(red: r, green: g, blue: b, alpha: 1.0))
     }
 
     @IBAction func clearColor(_ sender: Any) {
         self.zx_setnavbarBackgroundColor(UIColor.clear)
+        self.zx_settabbarBackgroundColor(UIColor.clear)
     }
     
     override func didReceiveMemoryWarning() {

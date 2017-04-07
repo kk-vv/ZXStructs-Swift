@@ -46,6 +46,10 @@ class ZXHHViewController: UIViewController {
         view.addSubview(btn2)
         
         self.zx_navbarAddBarButtonItem(customView: view, at: .right)
+        let webView = UIWebView.init(frame: self.view.frame)
+        webView.loadRequest(URLRequest.init(url: URL(string: "https://www.bing.com")!))
+        self.view.addSubview(webView)
+        
     }
     
     func customAction(sender:UIButton) {

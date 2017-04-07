@@ -151,12 +151,12 @@ ZXStructs.loadtabBarConfig()
 ##### `扩展(添加controller)`
 
 ```
-按钮从plist文件读取:
+1.按钮从plist文件读取:
 tabBar?.zx_addChildViewController(demoVC, fromPlistItemIndex: 0)
 ```
 
 ```
-代码配置
+2.代码配置
 let itemInfo                = ZXTabbarItem()
 //Item 标题
 itemInfo.title              = "不一样"
@@ -172,15 +172,25 @@ tabBar?.zx_addChildViewController(ZXHHViewController(), fromItem: itemInfo)
 ```
 
 ```
-系统方法
+3.系统方法
 tabBar?.addChildViewController(vc)
+```
+
+- `修改颜色`
+
+```
+self.zx_settabbarBackgroundColor(UIColor.clear)
 ```
 
 - `TabBar 效果图`
 
-|TAB|
+|有颜色|
 |----|
-|![tab1](https://github.com/iFallen/ZXStructs-Swift/raw/master/imgs/tabbar.png)|
+|![tab1](https://github.com/iFallen/ZXStructs-Swift/raw/master/imgs/tabbar1.png)|
+
+|无颜色|
+|----|
+|![tab1](https://github.com/iFallen/ZXStructs-Swift/raw/master/imgs/tabbar2.png)|
 
 - `...`
 

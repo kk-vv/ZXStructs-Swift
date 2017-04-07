@@ -193,6 +193,16 @@ extension UIViewController {
         }
     }
     
+    func zx_settabbarBackgroundColor(_ color:UIColor!) {
+        self.tabBarController?.tabBar.barTintColor = color
+        if color == UIColor.clear {
+            self.tabBarController?.tabBar.isTranslucent = true
+            self.tabBarController?.tabBar.backgroundImage = UIImage()
+        }else{
+            self.tabBarController?.tabBar.isTranslucent = false
+        }
+    }
+    
     //MARK: -
     final func xxx_rightBarButtonAction(sender:UIBarButtonItem) {
         zx_rightBarButtonAction(index: sender.tag)
