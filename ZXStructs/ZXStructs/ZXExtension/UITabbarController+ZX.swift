@@ -28,14 +28,9 @@ extension UITabBarController {
         
         
         if item.showAsPresent {
-//            let mInfo = ZXPresentVCInfo.init(["className":String(describing: type(of: controller)),"barItem":item])
             let mInfo = ZXPresentVCInfo.init()
-            //mInfo.className = String(describing: type(of: controller))
-//            mInfo.className = NSStringFromClass(type(of: controller) as! AnyClass).components(separatedBy: ".").last!
             mInfo.className =  controller.zx_className
             mInfo.barItem = item
-            
-//            ZXPresentVCInfo.zxPresentVCsDic[String.init(format: "%d", (self.viewControllers?.count)!)] = mInfo
             ZXPresentVCInfo.zxPresentVCsDic["\((self.viewControllers?.count)!)"] = mInfo
             xxx_addChileViewController(UIViewController.init(), from: item)
         }else{

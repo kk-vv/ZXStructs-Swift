@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var lbMark: UILabel!
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var lbBody: UILabel!
+    var type = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -50,7 +51,7 @@ class ViewController: UIViewController {
         self.lbIconFont.font    = UIFont.zx_iconFont(30)    //Iconfont
         //self.lbIconFont.font    = UIFont(name: UIFont.zx_iconFontName, size: 30)
         //self.lbIconFont.font    = UIFont.zx_iconFont //默认正文字体大小
-        self.lbIconFont.text    =   "IconFont,\(code1)"
+        self.lbIconFont.text        =   "IconFont,\(code1)"
         self.lbIconFont.textColor   =   UIColor.zx_customCColor
         
         self.zx_clearNavbarBackButtonTitle()
@@ -58,6 +59,7 @@ class ViewController: UIViewController {
         //Add Bar Button Item
         self.zx_navbarAddBarButtonItems(iconFontTexts: [code2,code3], fontSize: 30, color: UIColor.orange, at: .left)
         self.zx_navbarAddBarButtonItems(textNames: ["Call"], font: nil, color: UIColor.white, at: .right)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -65,13 +67,32 @@ class ViewController: UIViewController {
         self.zx_setnavbarBackgroundColor(UIColor.zx_navBarColor)
     }
     
-    //Left Bar Button Action
+    //MARK: - Left Bar Button Action
     override func zx_leftBarButtonAction(index: Int) {
         print("Left Action At Index:\(index)")
     }
-    //Right Bar Button Action
+    //MARK: Right Bar Button Action
     override func zx_rightBarButtonAction(index: Int) {
         print("Right Action At Index:\(index)")
+    }
+    
+    //MARK: - Play Sound
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        let index = type % 3
+        switch index {
+        case 0:
+            //MARK: - Check Location
+            ZXAudioUtils.vibrate()
+        case 1:
+            ZXAudioUtils.play(forResource: "soundA.caf", ofType:nil)
+        case 2:
+            ZXAudioUtils.play(withId: 1016)
+        default: break
+            
+        }
+        type += 1
+        type = type % 100
     }
 
     override func didReceiveMemoryWarning() {
