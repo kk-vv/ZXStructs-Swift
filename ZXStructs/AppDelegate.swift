@@ -63,16 +63,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         })
         
-        let tel = "1808100373"
-        let pwd = "a123456"
-        let email = "hulj 163.com"
+        let tel = "18081001111"
+        let pwd = "a123654"
+        let email = "fdhska@fhsa.com"
         let sizeText = "fdhasjk 发的哈刷卡机"
-        
+        let trueC = "你好"
         print(tel.zx_mobileValid())
         print(pwd.zx_passwordValid())
         print(email.zx_emailValid())
-        print(sizeText.zx_textSize(toFont: UIFont.zx_titleFont(20), limiteSize: CGSize(width: 200, height: 200)))
-        
+        print(trueC.zx_isChinese())
+        print("Text Size: \(sizeText.zx_textRectSize(toFont: UIFont.zx_titleFont(20), limiteSize: CGSize(width: 200, height: 200)))")
         
         return true
     }

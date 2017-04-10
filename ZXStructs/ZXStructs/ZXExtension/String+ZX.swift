@@ -58,7 +58,7 @@ extension String {
         return zx_matchs(regularString: CHINESE_REG)
     }
     
-    func zx_textSize(toFont font:UIFont,limiteSize:CGSize) -> CGSize {
+    func zx_textRectSize(toFont font:UIFont,limiteSize:CGSize) -> CGSize {
         let size = (self as NSString).boundingRect(with: limiteSize, options: NSStringDrawingOptions(rawValue: NSStringDrawingOptions.usesLineFragmentOrigin.rawValue|NSStringDrawingOptions.truncatesLastVisibleLine.rawValue), attributes: [NSFontAttributeName:font], context: nil).size
         return size
     }
