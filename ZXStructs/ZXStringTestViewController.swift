@@ -2,7 +2,7 @@
 //  ZXStringTestViewController.swift
 //  ZXStructs
 //
-//  Created by screson on 2017/4/10.
+//  Created by JuanFelix on 2017/4/10.
 //  Copyright © 2017年 screson. All rights reserved.
 //
 
@@ -24,7 +24,7 @@ class ZXStringTestViewController: UIViewController {
         
         // 1
         let string = "Testing Attributed Strings" as NSString
-        var attributedString = NSMutableAttributedString(string: string as String)
+        let attributedString = NSMutableAttributedString(string: string as String)
         
         // 2
         let firstAttributes = [NSForegroundColorAttributeName: UIColor.blue, NSBackgroundColorAttributeName: UIColor.yellow, NSUnderlineStyleAttributeName: 1] as [String : Any]
@@ -38,7 +38,7 @@ class ZXStringTestViewController: UIViewController {
         
         // 4
 //        lb1.attributedText = attributedString
-        
+                
     }
 
     override func didReceiveMemoryWarning() {

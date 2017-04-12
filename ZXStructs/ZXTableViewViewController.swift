@@ -2,7 +2,7 @@
 //  ZXTableViewViewController.swift
 //  ZXStructs
 //
-//  Created by screson on 2017/4/10.
+//  Created by JuanFelix on 2017/4/10.
 //  Copyright © 2017年 screson. All rights reserved.
 //
 

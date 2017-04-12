@@ -201,9 +201,31 @@ self.zx_settabbarBackgroundColor(UIColor.clear)
 - `ZXAlertUtils`
 - `更新中...`
 
-### `Network`
+### `Network(Tiny)`
 
-- `更新中...`
+- `Asyn Request(JSON/String GET/POSt)`
+
+```
+ZXNetwork.asyncRequest(withUrl: "https://itunes.apple.com/search", params: ["term":"qq","limit":"1","entity":"software"], method: .get, completion: { (obj, stringValue) in
+    print("\(obj ?? "")")
+}, timeOut: { (errorMsg) in
+    print("TimeOut:\(errorMsg)")
+}) { (code, errorMsg) in
+    print("HttpError:\(code) \(errorMsg)")
+}
+```
+
+- `Upload Image`
+
+```
+ZXNetwork.uploadImage(to: "https://192.168.0.81:8000/upload", images: [UIImage(named:"r1")!,UIImage(named:"r2")!], params: nil, compressRatio: 1, completion: { (obj, string) in
+    print("\(obj ?? "")")
+}, timeOut: { (errorMsg) in
+    print("TimeOut:\(errorMsg)")
+}) { (code, errorMsg) in
+    print("HttpError:\(code) \(errorMsg)")
+}
+```
 
 ### `RemoteNotification`
 

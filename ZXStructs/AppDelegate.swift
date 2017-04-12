@@ -74,6 +74,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(trueC.zx_isChinese())
         print("Text Size: \(sizeText.zx_textRectSize(toFont: UIFont.zx_titleFont(20), limiteSize: CGSize(width: 200, height: 200)))")
         
+        //Request
+        ZXNetwork.showRequestLog = false
+        ZXNetwork.timeoutInterval = 5
+        ZXNetwork.asyncRequest(withUrl: "https://itunes.apple.com/search", params: ["term":"qq","limit":"1","entity":"software"], method: .get, completion: { (obj, stringValue) in
+            print("\(obj ?? "")")
+        }, timeOut: { (errorMsg) in
+            print("TimeOut:\(errorMsg)")
+        }) { (code, errorMsg) in
+            print("HttpError:\(code) \(errorMsg)")
+        }
+        
+        
+        ZXNetwork.uploadImage(to: "https://192.168.0.81:8000/upload", images: [UIImage(named:"r1")!,UIImage(named:"r2")!], params: nil, compressRatio: 1, completion: { (obj, string) in
+            print("\(obj ?? "")")
+        }, timeOut: { (errorMsg) in
+            print("TimeOut:\(errorMsg)")
+        }) { (code, errorMsg) in
+            print("HttpError:\(code) \(errorMsg)")
+        }
         return true
     }
 }
