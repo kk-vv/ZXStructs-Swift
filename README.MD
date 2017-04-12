@@ -203,7 +203,7 @@ self.zx_settabbarBackgroundColor(UIColor.clear)
 
 ### `Network(Tiny)`
 
-- `Asyn Request(JSON/String GET/POSt)`
+- `Async Request(JSON/String GET/POST)`
 
 ```
 ZXNetwork.asyncRequest(withUrl: "https://itunes.apple.com/search", params: ["term":"qq","limit":"1","entity":"software"], method: .get, completion: { (obj, stringValue) in
