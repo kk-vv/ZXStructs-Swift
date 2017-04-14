@@ -5,7 +5,7 @@
 >
 空余时间完善中....
 
-- `Tags`：0.1.1
+- `Tags`：0.2
 
 ### `UIConfig`
 
@@ -181,6 +181,19 @@ tabBar?.addChildViewController(vc)
 ```
 self.zx_settabbarBackgroundColor(UIColor.clear)
 ```
+
+`注`
+
+>
+如果 showAsPresent = true ，必须实现代理方法
+
+>
+	tabBar.delegate = self
+	extension AppDelegate: UITabBarControllerDelegate {
+	    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+	        return UITabBarController.zx_tabBarController(tabBarController,shouldSelectViewController:viewController)
+	    }
+	}
 
 - `TabBar 效果图`
 
