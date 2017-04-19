@@ -211,7 +211,50 @@ self.zx_settabbarBackgroundColor(UIColor.clear)
 ### `CommonUtils`
 
 - `ZXImagePickerUtils`
+
+```
+imagePicker.takePhoto(rootVC: self) { [unowned self] (image, status, errorMsg) in
+    if status == .success {
+        self.imgView.image = image
+    }else{
+        ZXAlertUtils.showAlert(withTitle: "提示", message: errorMsg!)
+    }
+}
+```
+
 - `ZXAlertUtils`
+
+```
+ZXAlertUtils.showAlert(withTitle: "提示", message: errorMsg!)
+```
+
+- `ZXLocationUtils`
+
+```
+ZXLocationUtils.shareInstance.checkCurrentLocation(completion: { (success, location, errorMsg) in
+    if success,let location = location {
+        print("latitude:\(location.coordinate.latitude),longitude:\(location.coordinate.longitude)")
+    }else{
+        print(errorMsg!)
+    }
+})
+```
+
+- `ZXDateUtils`
+
+```
+ZXDateUtils.currentDateTime(true, timeWithSecond: true)//2017年04月19日 12:01:57
+ZXDateUtils.currentDate(true)//2017年04月19日
+ZXDateUtils.currentTime(true)//12:01:57
+ZXDateUtils.datetimeFromMilliSecond(1492569882000, chineseFormat: true, timeWithSecond: false)//2017年04月19日 10:44
+ZXDateUtils.dateFromMilliSecond(1492569882000, chineseFormat: false)//2017-04-19
+ZXDateUtils.timeFromMilliSecond(1492569882000, timeWithSecond: true)//10:44:42
+ZXDateUtils.milliSecondFromDate("2017/4/19 10:54:48",dateFormat: "YYYY/MM/dd HH:mm:ss")//1492570488000
+ZXDateUtils.milliSecondFromDate("2017年4月19日 10:54:48",dateFormat: "YYYY年MM月dd日 HH:mm:ss")//1492570488000
+ZXDateUtils.currentMillisecond()//1492574517213
+ZXDateUtils.intToTime(123456,componentString: nil)//10°17′36″
+```
+
 - `更新中...`
 
 ### `Network(Tiny)`

@@ -78,21 +78,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ZXNetwork.showRequestLog = false
         ZXNetwork.timeoutInterval = 5
         ZXNetwork.asyncRequest(withUrl: "https://itunes.apple.com/search", params: ["term":"qq","limit":"1","entity":"software"], method: .get, completion: { (obj, stringValue) in
-            print("\(obj ?? "")")
+            //print("\(obj ?? "")")
         }, timeOut: { (errorMsg) in
-            print("TimeOut:\(errorMsg)")
+            //print("TimeOut:\(errorMsg)")
         }) { (code, errorMsg) in
-            print("HttpError:\(code) \(errorMsg)")
+            //print("HttpError:\(code) \(errorMsg)")
         }
         
         
-        ZXNetwork.uploadImage(to: "https://192.168.0.81:8000/upload", images: [UIImage(named:"r1")!,UIImage(named:"r2")!], params: nil, compressRatio: 1, completion: { (obj, string) in
-            print("\(obj ?? "")")
-        }, timeOut: { (errorMsg) in
-            print("TimeOut:\(errorMsg)")
-        }) { (code, errorMsg) in
-            print("HttpError:\(code) \(errorMsg)")
-        }
+//        ZXNetwork.uploadImage(to: "https://192.168.0.81:8000/upload", images: [UIImage(named:"r1")!,UIImage(named:"r2")!], params: nil, compressRatio: 1, completion: { (obj, string) in
+//            print("\(obj ?? "")")
+//        }, timeOut: { (errorMsg) in
+//            print("TimeOut:\(errorMsg)")
+//        }) { (code, errorMsg) in
+//            print("HttpError:\(code) \(errorMsg)")
+//        }
+        
+        print(ZXDateUtils.currentDateTime(true, timeWithSecond: true))
+//        print(ZXDateUtils.currentDateTime(true, timeWithSecond: false))
+//        print(ZXDateUtils.currentDateTime(false, timeWithSecond: true))
+//        print(ZXDateUtils.currentDateTime(false, timeWithSecond: false))
+        print(ZXDateUtils.currentDate(true))
+//        print(ZXDateUtils.currentDate(false))
+        print(ZXDateUtils.currentTime(true))
+//        print(ZXDateUtils.currentTime(false))
+        print(ZXDateUtils.datetimeFromMilliSecond(1492569882000, chineseFormat: true, timeWithSecond: false))
+        print(ZXDateUtils.dateFromMilliSecond(1492569882000, chineseFormat: false))
+        print(ZXDateUtils.timeFromMilliSecond(1492569882000, timeWithSecond: true))
+        print(ZXDateUtils.milliSecondFromDate("2017/4/19 10:54:48",dateFormat: "YYYY/MM/dd HH:mm:ss"))
+        print(ZXDateUtils.milliSecondFromDate("2017年4月19日 10:54:48",dateFormat: "YYYY年MM月dd日 HH:mm:ss"))
+        print(ZXDateUtils.currentMillisecond())
+        print(ZXDateUtils.intToTime(123456,componentString: nil))
+        
         return true
     }
 }
