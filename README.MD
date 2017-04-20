@@ -213,13 +213,31 @@ self.zx_settabbarBackgroundColor(UIColor.clear)
 - `ZXImagePickerUtils`
 
 ```
-imagePicker.takePhoto(rootVC: self) { [unowned self] (image, status, errorMsg) in
+//相册取
+imagePicker.choosePhoto(presentFrom: self) {[unowned self] (image, status) in
     if status == .success {
         self.imgView.image = image
     }else{
-        ZXAlertUtils.showAlert(withTitle: "提示", message: errorMsg!)
+        if status == .denied {
+            ZXImagePickerUtils.showTips(at: self, type: .choosePhoto)
+        }else{
+            ZXAlertUtils.showAlert(withTitle: "提示", message: status.description())
+        }
     }
 }
+//拍照
+imagePicker.takePhoto(presentFrom: self) { [unowned self] (image, status) in
+    if status == .success {
+        self.imgView.image = image
+    }else{
+        if status == .denied {
+            ZXImagePickerUtils.showTips(at: self, type: .takePhoto)
+        }else {
+            ZXAlertUtils.showAlert(withTitle: "提示", message: status.description())
+        }
+    }
+}
+        
 ```
 
 - `ZXAlertUtils`

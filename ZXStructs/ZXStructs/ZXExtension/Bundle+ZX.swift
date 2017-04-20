@@ -43,4 +43,16 @@ extension Bundle{
     static var zx_projectName: String! {
         return self.main.infoDictionary!["CFBundleExecutable"] as! String
     }
+    
+    static var zx_bundleVersion: String {
+        return self.main.infoDictionary!["CFBundleShortVersionString"] as! String
+    }
+    
+    static var zx_bundleBuild: String {
+        return self.main.infoDictionary!["CFBundleVersion"] as! String
+    }
+    
+    static var zx_bundleId: String {
+        return self.main.infoDictionary!["CFBundleIdentifier"] as! String
+    }
 }

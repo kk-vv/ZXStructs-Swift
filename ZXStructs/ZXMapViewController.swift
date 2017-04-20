@@ -30,21 +30,29 @@ class ZXMapViewController: UIViewController {
     }
     
     @IBAction func takePhotoAction(_ sender: Any) {
-        imagePicker.takePhoto(rootVC: self) { [unowned self] (image, status, errorMsg) in
+        imagePicker.takePhoto(presentFrom: self) { [unowned self] (image, status) in
             if status == .success {
                 self.imgView.image = image
             }else{
-                ZXAlertUtils.showAlert(withTitle: "提示", message: errorMsg!)
+                if status == .denied {
+                    ZXImagePickerUtils.showTips(at: self, type: .takePhoto)
+                }else {
+                    ZXAlertUtils.showAlert(withTitle: "提示", message: status.description())
+                }
             }
         }
     }
 
     @IBAction func choosePhotoAction(_ sender: Any) {
-        imagePicker.choosePhoto(rootVC: self) {[unowned self] (image, status, errorMsg) in
+        imagePicker.choosePhoto(presentFrom: self) {[unowned self] (image, status) in
             if status == .success {
                 self.imgView.image = image
             }else{
-                ZXAlertUtils.showAlert(withTitle: "提示", message: errorMsg!)
+                if status == .denied {
+                    ZXImagePickerUtils.showTips(at: self, type: .choosePhoto)
+                }else{
+                    ZXAlertUtils.showAlert(withTitle: "提示", message: status.description())
+                }
             }
         }
     }

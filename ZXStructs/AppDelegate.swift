@@ -94,21 +94,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            print("HttpError:\(code) \(errorMsg)")
 //        }
         
-        print(ZXDateUtils.currentDateTime(true, timeWithSecond: true))
-//        print(ZXDateUtils.currentDateTime(true, timeWithSecond: false))
-//        print(ZXDateUtils.currentDateTime(false, timeWithSecond: true))
-//        print(ZXDateUtils.currentDateTime(false, timeWithSecond: false))
-        print(ZXDateUtils.currentDate(true))
-//        print(ZXDateUtils.currentDate(false))
-        print(ZXDateUtils.currentTime(true))
-//        print(ZXDateUtils.currentTime(false))
-        print(ZXDateUtils.datetimeFromMilliSecond(1492569882000, chineseFormat: true, timeWithSecond: false))
-        print(ZXDateUtils.dateFromMilliSecond(1492569882000, chineseFormat: false))
-        print(ZXDateUtils.timeFromMilliSecond(1492569882000, timeWithSecond: true))
-        print(ZXDateUtils.milliSecondFromDate("2017/4/19 10:54:48",dateFormat: "YYYY/MM/dd HH:mm:ss"))
-        print(ZXDateUtils.milliSecondFromDate("2017年4月19日 10:54:48",dateFormat: "YYYY年MM月dd日 HH:mm:ss"))
-        print(ZXDateUtils.currentMillisecond())
-        print(ZXDateUtils.intToTime(123456,componentString: nil))
+ 
+        
         
         return true
     }
