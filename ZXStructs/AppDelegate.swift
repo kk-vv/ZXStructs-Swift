@@ -55,11 +55,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         //MARK: - Check Location
-        ZXLocationUtils.shareInstance.checkCurrentLocation(completion: { (success, location, errorMsg) in
-            if success,let location = location {
+        ZXLocationUtils.shareInstance.checkCurrentLocation(completion: { (status, location) in
+            if status == .success,let location = location {
                 print("latitude:\(location.coordinate.latitude),longitude:\(location.coordinate.longitude)")
             }else{
-                print(errorMsg!)
+                print(status.description())
             }
         })
         

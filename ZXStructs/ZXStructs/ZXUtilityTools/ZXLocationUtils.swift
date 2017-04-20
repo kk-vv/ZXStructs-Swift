@@ -9,12 +9,38 @@
 import UIKit
 import CoreLocation
 
-typealias ZXCheckLocation = (Bool,CLLocation?,String?) -> Void
+enum ZXCheckLocationStatus {
+    case success,lastTimeNotEnd,disable
+    case notDetermined
+    case restricted
+    case denied
+    case failed
+    func description() -> String {
+        switch self {
+        case .success:
+            return "成功"
+        case .lastTimeNotEnd:
+            return "上一次调用未结束,请稍后再试..."
+        case .disable:
+            return "设备定位服务不可用"
+        case .notDetermined:
+            return "未作出授权选择"
+        case .restricted:
+            return "该功能被禁用"
+        case .denied:
+            return "阻止了位置访问权限"
+        case .failed:
+            return "获取位置信息失败"
+        }
+    }
+}
+
+typealias ZXCheckLocation = (ZXCheckLocationStatus,CLLocation?) -> Void
 private let shareLocation = ZXLocationUtils()
 
-class ZXLocationUtils: NSObject {
+class ZXLocationUtils: NSObject,CLLocationManagerDelegate {
     
-    var checkEnd: ZXCheckLocation?
+    private var checkEnd: ZXCheckLocation?
     var located:  Bool = false
     var locating: Bool = false
     var manager:  CLLocationManager?
@@ -34,9 +60,9 @@ class ZXLocationUtils: NSObject {
     func checkCurrentLocation(completion:ZXCheckLocation?) -> Void {
         if CLLocationManager.locationServicesEnabled() {
             let status = CLLocationManager.authorizationStatus()
-            if status == .authorizedAlways || status == .authorizedWhenInUse {
+            if status == .authorizedAlways || status == .authorizedWhenInUse || status == .notDetermined {
                 if locating {
-                    completion?(false,nil,"上一次调用未结束,请稍后再试...")
+                    completion?(.lastTimeNotEnd,nil)
                     return
                 }else{
                     located = false
@@ -46,36 +72,23 @@ class ZXLocationUtils: NSObject {
                 locating = true
             }else{
                 switch status {
-                case .notDetermined:
-                    //用户还未做出位置使用权限选择
-                    if locating {
-                        completion?(false,nil,"上一次调用未结束,请稍后再试...")
-                        return
-                    }else{
-                        located = false
-                    }
-                    self.checkEnd = completion
-                    self.manager?.startUpdatingLocation()
-                    locating = true
                 case .restricted:
-                    completion?(false,nil,"定位服务使用受限")
+                    completion?(.restricted,nil)
                 case .denied:
-                    completion?(false,nil,"用户阻止位置使用权限")
+                    completion?(.denied,nil)
                 default:
                     break
                 }
             }
         }else{
-            completion?(false,nil,"设备未开启定位服务")
+            completion?(.disable,nil)
         }
         let zxLocation = ZXLocationUtils()
         zxLocation.checkEnd = completion
     }
-}
-
-extension ZXLocationUtils: CLLocationManagerDelegate {
+    
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        checkEnd?(false,nil,error.localizedDescription)
+        self.checkEnd?(.failed,nil)
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -85,6 +98,6 @@ extension ZXLocationUtils: CLLocationManagerDelegate {
         located = true
         locating = false
         manager.stopUpdatingLocation()
-        checkEnd?(true,locations.last,nil)
+        self.checkEnd?(.success,locations.last)
     }
 }
