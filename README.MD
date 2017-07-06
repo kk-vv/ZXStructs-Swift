@@ -1,5 +1,9 @@
 ## `ZXStructs-Swift`
 
+
+>
+pod "ZXStructs"
+
 >
 通用UI配置，通用工具类
 >
