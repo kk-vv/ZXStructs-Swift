@@ -1,8 +1,19 @@
 ## `ZXStructs-Swift`
 
 
->
+## Installation
+
+ZXStructs is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
 pod "ZXStructs"
+```
+
+## Author
+
+JuanFelix, hulj1204@yahoo.com
+
 
 >
 通用UI配置，通用工具类
