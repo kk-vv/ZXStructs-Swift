@@ -1,5 +1,8 @@
 ## `ZXStructs-Swift`
 
+## `New Version`
+
+- https://github.com/iFallen/ZXStructs
 
 ## Installation
 
